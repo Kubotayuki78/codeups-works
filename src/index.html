@@ -145,13 +145,13 @@
             </div>
           </div>
         </nav>
-      </div> 
+      </div>
     </header>
 
     <main>
       <section class="mv">
         <div class="mv__inner">
-          <div class="swiper fvSwiper">
+          <div class="swiper js-fvSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="mv__image">
@@ -229,8 +229,8 @@
           <h2 class="heading__title-ja">キャンペーン</h2>
         </div>
         <div class="campaign__inner inner">
-          <div class="campaign__cards">
-            <div class="swiper cardSwiper">
+          <div class="campaign__cards campaign-cards">
+            <div class="swiper js-cardSwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide campaign__card campaign-card">
                   <figure class="campaign-card__image">
@@ -429,7 +429,7 @@
             <p class="heading__title-en blog-heading__title-en">blog</p>
             <h2 class="heading__title-ja blog-heading__title-ja">ブログ</h2>
           </div>
-          <div class="blog__cards">
+          <div class="blog__cards blog-cards">
             <a href="#" class="blog__card blog-card">
               <div class="blog-card__image">
                 <img
@@ -567,34 +567,42 @@
                 alt="泳ぐウミガメの画像"
               />
             </div>
-            <div class="price__lists">
-              <h3 class="price-list__title">ライセンス講習</h3>
-              <ul class="price__list price-list">
-                <li>オープンウォーターダイバーコース<span>¥50,000</span></li>
-                <li>
-                  アドバンスドオープンウォーターコース<span>¥60,000</span>
-                </li>
-                <li>レスキュー＋EFRコース<span>¥70,000</span></li>
-              </ul>
-              <h3 class="price-list__title">体験ダイビング</h3>
-              <ul class="price__list price-list">
-                <li>ビーチ体験ダイビング(半日)<span>¥7,000</span></li>
-                <li>ビーチ体験ダイビング(1日)<span>¥14,000</span></li>
-                <li>ボート体験ダイビング(半日)<span>¥10,000</span></li>
-                <li>ボート体験ダイビング(1日)<span>¥18,000</span></li>
-              </ul>
-              <h3 class="price-list__title">ファンダイビング</h3>
-              <ul class="price__list price-list">
-                <li>ビーチダイビング(2ダイブ)<span>¥14,000</span></li>
-                <li>ボートダイビング(2ダイブ)<span>¥18,000</span></li>
-                <li>スペシャルダイビング(2ダイブ)<span>¥24,000</span></li>
-                <li>ナイトダイビング(1ダイブ)<span>¥10,000</span></li>
-              </ul>
-              <h3 class="price-list__title">スペシャルダイビング</h3>
-              <ul class="price__list price-list">
-                <li>貸切ダイビング(2ダイブ)<span>¥24,000</span></li>
-                <li>1日ダイビング(3ダイブ)<span>¥32,000</span></li>
-              </ul>
+            <div class="price__lists price-lists">
+              <div class="price__list price-list">
+                <h3 class="price-list__title">ライセンス講習</h3>
+                <ul class="price-list__content">
+                  <li>オープンウォーターダイバーコース<span>¥50,000</span></li>
+                  <li>
+                    アドバンスドオープンウォーターコース<span>¥60,000</span>
+                  </li>
+                  <li>レスキュー＋EFRコース<span>¥70,000</span></li>
+                </ul>
+              </div>
+              <div class="price__list price-list">
+                <h3 class="price-list__title">体験ダイビング</h3>
+                <ul class="price__list price-list__content">
+                  <li>ビーチ体験ダイビング(半日)<span>¥7,000</span></li>
+                  <li>ビーチ体験ダイビング(1日)<span>¥14,000</span></li>
+                  <li>ボート体験ダイビング(半日)<span>¥10,000</span></li>
+                  <li>ボート体験ダイビング(1日)<span>¥18,000</span></li>
+                </ul>
+              </div>
+              <div class="price__list price-list">
+                <h3 class="price-list__title">ファンダイビング</h3>
+                <ul class="price__list price-list__content">
+                  <li>ビーチダイビング(2ダイブ)<span>¥14,000</span></li>
+                  <li>ボートダイビング(2ダイブ)<span>¥18,000</span></li>
+                  <li>スペシャルダイビング(2ダイブ)<span>¥24,000</span></li>
+                  <li>ナイトダイビング(1ダイブ)<span>¥10,000</span></li>
+                </ul>
+              </div>
+              <div class="price__list price-list">
+                <h3 class="price-list__title">スペシャルダイビング</h3>
+                <ul class="price__list price-list__content">
+                  <li>貸切ダイビング(2ダイブ)<span>¥24,000</span></li>
+                  <li>1日ダイビング(3ダイブ)<span>¥32,000</span></li>
+                </ul>
+              </div>
             </div>
             <div class="price__pc-image colorbox">
               <img
@@ -655,7 +663,7 @@
       </section>
     </main>
 
-    <div class="to-top">
+    <div class="to-top js-to-top">
       <a href="#top"><span></span></a>
     </div>
 

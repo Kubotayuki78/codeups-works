@@ -1,4 +1,8 @@
 @use "global" as *;
+.price-list {
+
+}
+
 .price-list__title {
   font-size: rem(16);
   font-weight: 700;
@@ -20,7 +24,8 @@
   }
 }
 
-.price-list {
+.price-list__content {
+  margin-top: rem(8);
   display: flex;
   flex-direction: column;
   gap: rem(11);
@@ -31,7 +36,7 @@
   }
 }
 
-.price-list li {
+.price-list__content li {
   display: flex;
   justify-content: space-between;
   font-size: rem(14);

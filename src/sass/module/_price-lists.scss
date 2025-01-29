@@ -1,0 +1,11 @@
+@use 'global' as *;
+.price-lists {
+  display: flex;
+  flex-direction: column;
+  gap: rem(42);
+
+  @include mq("md") {
+    width: 45.6%;
+    gap: rem(40);
+  }
+}

@@ -74,14 +74,10 @@
 }
 
 .blog__cards {
-  display: grid;
-  gap: rem(40);
   margin-top: rem(32);
 
   @include mq("md") {
-    flex-direction: row;
     margin-top: rem(86);
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 

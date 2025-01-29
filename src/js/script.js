@@ -1,7 +1,7 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
-  let topBtn = $(".to-top");
+  let topBtn = $(".js-to-top");
   topBtn.hide();
 
   // ボタンの表示設定
@@ -68,7 +68,7 @@ jQuery(function ($) {
     return false;
   });
 
-  const swiper = new Swiper(".fvSwiper", {
+  const swiper = new Swiper(".js-fvSwiper", {
     loop: true,
     allowTouchMove: false,
     clickable: false,
@@ -79,7 +79,7 @@ jQuery(function ($) {
     speed: 2000, //追加
   });
 
-  const swiper2 = new Swiper(".cardSwiper", {
+  const swiper2 = new Swiper(".js-cardSwiper", {
     slidesPerView: "1.264",
     spaceBetween: 20,
     loop: true,

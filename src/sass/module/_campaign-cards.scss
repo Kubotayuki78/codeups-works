@@ -1,0 +1,8 @@
+@use 'global' as *;
+.campaign-cards {
+    display: flex;
+    gap: rem(40);
+  
+    @include mq("md") {
+    }
+  }
