@@ -1,0 +1,202 @@
+@use "global" as *;
+
+.contact {
+  margin-top: rem(80);
+  filter: drop-shadow(rem(0) rem(3) rem(1) #ccc);
+
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}
+
+.contact::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(109); /*画像の幅*/
+  height: rem(50); /*画像の高さ*/
+  background-image: url("../images/common/deco-fishes-to-left.png");
+  background-size: contain;
+  vertical-align: middle;
+  top: rem(-26);
+  right: calc(50% - min(48%, rem(172)));
+
+  @include mq("md") {
+    top: rem(-40);
+    right: calc(50% - min(48%, rem(670)));
+    width: rem(301); /*画像の幅*/
+    height: rem(138); /*画像の高さ*/
+  }
+}
+
+.contact__inner {
+  position: relative;
+  @include mq("md") {
+    padding-left: rem(25);
+    padding-right: rem(25);
+  }
+}
+
+.contact__head-image {
+  position: absolute;
+  top: rem(-27);
+  right: rem(15);
+  width: rem(109);
+
+  @include mq("md") {
+    width: rem(301);
+    top: rem(-39);
+    left: min(rem(935), 70vw);
+  }
+}
+
+.contact__wrapper {
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(1080);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rem(4) rem(4) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+    padding: rem(80) rem(50);
+    position: relative;
+    margin-bottom: rem(10);
+  }
+}
+
+.contact__wrapper::after {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    width: rem(1);
+    height: 61.4%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 52.9%;
+    background: $accent-color;
+  }
+}
+
+.contact__left {
+  text-align: center;
+
+  @include mq("md") {
+    width: 53%;
+    max-width: rem(440);
+  }
+}
+
+.contact__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: rem(295);
+  border-bottom: rem(1) solid $accent-color;
+
+  @include mq("md") {
+    width: rem(440);
+  }
+}
+
+.contact__logo img {
+  width: rem(174);
+  max-width: 100%;
+  display: inline-block;
+  text-align: center;
+
+  @include mq("md") {
+    width: rem(200);
+  }
+}
+
+.contact__body {
+  @include mq("md") {
+    display: flex;
+    margin-top: rem(24);
+  }
+}
+
+.contact__body-address {
+  margin-top: rem(16);
+  @include mq("md") {
+    width: 38%;
+    margin-top: rem(0);
+  }
+}
+
+.contact__body-address p {
+  font-style: normal;
+  color: #0d2936;
+  line-height: 1.5;
+
+  @include mq("md") {
+    text-align: left;
+  }
+}
+
+.contact__body-address p + p {
+  margin-top: rem(4);
+}
+
+.contact__body-map {
+  margin-top: rem(16);
+  padding-right: rem(25);
+  padding-left: rem(25);
+  text-align: center;
+  aspect-ratio: 295 / 135; //横幅 / 高さ
+
+  @include mq(md) {
+    width: 62%;
+    margin-top: rem(0);
+    padding-left: 0;
+    padding-right: 0;
+    aspect-ratio: 273 / 148; //横幅 / 高さ
+  }
+}
+
+.contact__body-map iframe {
+  max-width: 100%; //はみ出さないように
+  height: 100%;
+  vertical-align: top;
+
+  @include mq(md) {
+  }
+}
+
+.contact__right {
+  text-align: center;
+
+  @include mq("md") {
+    width: 47%;
+    padding-left: rem(22);
+  }
+}
+
+.contact__heading {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.heading__title-en.contact-heading__title-en {
+  font-size: rem(80);
+}
+
+.heading__title-ja.contact-heading__title-ja {
+  margin-top: rem(-2);
+}
+
+.contact__text {
+  font-size: rem(14);
+  line-height: 1.2;
+  margin-top: rem(12);
+  color: $accent-color;
+}
+
+.contact__button {
+  text-align: center;
+  margin-top: rem(40);
+}

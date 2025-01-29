@@ -1,0 +1,81 @@
+@use "global" as *;
+.voice {
+  margin-top: rem(89);
+  // padding-bottom: rem(82);
+
+  @include mq("md") {
+    margin-top: rem(143);
+    position: relative;
+    // padding-bottom: rem(140);
+  }
+}
+
+.voice::before {
+  @include mq("md") {
+    content: ""; /*何も入れない*/
+    position: absolute;
+    display: inline-block;
+    width: rem(301); /*画像の幅*/
+    height: rem(138); /*画像の高さ*/
+    background-image: url("../images/common/deco-fishes-to-right.png");
+    background-size: contain;
+    vertical-align: middle;
+    top: rem(-120);
+    left: calc(50% - min(48%, rem(620)));
+  }
+}
+
+.voice::after {
+  @include mq("md") {
+    content: ""; /*何も入れない*/
+    position: absolute;
+    display: inline-block;
+    width: rem(71); /*画像の幅*/
+    height: rem(162); /*画像の高さ*/
+    background-image: url("../images/common/deco-seadragon.png");
+    background-size: contain;
+    vertical-align: middle;
+    bottom: rem(-73);
+    right: calc(50% - min(48%, rem(540)));
+  }
+}
+
+.voice__inner {
+  // max-width: rem(600);
+
+  @include mq("md") {
+    // position: relative;
+  }
+}
+
+.voice__heading {
+  margin-top: rem(8);
+
+  @include mq("md") {
+    margin-top: rem(6);
+  }
+}
+
+.voice__cards {
+  margin-top: rem(46);
+  gap: rem(40);
+  display: grid;
+
+  @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: rem(33);
+    flex-direction: row;
+  }
+}
+
+.voice__card {
+}
+
+.voice__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

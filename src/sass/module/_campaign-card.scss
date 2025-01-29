@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.campaign-card {
+  // width: 333px;
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.campaign-card__image {
+  aspect-ratio: 284/190; // 幅 / 高さ
+  overflow: hidden;
+
+  @include mq("md") {
+    aspect-ratio: 333/223;
+  }
+}
+
+.campaign-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-card__body {
+  padding-top: rem(16);
+  padding-inline: rem(16);
+
+  @include mq("md") {
+    padding-top: rem(25);
+  }
+}
+
+.campaign-card__tag {
+  border: rem(1) solid $accent-color;
+  display: inline-flex;
+  padding: rem(3) rem(11);
+  align-items: center;
+  font-size: rem(12);
+  line-height: rem(22);
+  color: $accent-color;
+
+  @include mq("md") {
+    padding: rem(5) rem(15);
+  }
+}
+
+.campaign-card__title {
+  margin-top: rem(4);
+  font-weight: 500;
+  line-height: rem(24);
+  font-size: rem(16);
+  padding-bottom: rem(7);
+  border-bottom: 1px solid $accent-color;
+}
+
+.campaign-card__foot {
+  text-align: center;
+  margin-top: auto;
+  padding-inline: rem(16);
+  padding-bottom: rem(26);
+
+  @include mq("md") {
+    padding-bottom: rem(40);
+  }
+}
+
+.campaign-card__text {
+  margin-top: rem(16);
+  font-size: rem(14);
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(16);
+  }
+}
+
+.campaign-card__price {
+  margin-top: rem(8);
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: rem(16);
+  // margin-bottom: rem(26);
+
+  @include mq("md") {
+    gap: rem(25);
+    // margin-bottom: rem(40);
+  }
+}
+
+.campaign-card__price-before,
+.campaign-card__price-after {
+  font-family: "Lato";
+  line-height: 1;
+  font-weight: $bold;
+}
+
+.campaign-card__price-before {
+  font-size: rem(20);
+  text-decoration: line-through;
+  text-decoration-color: #c94800;
+  text-decoration-thickness: rem(3); /* 線の太さ */
+
+  @include mq("md") {
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__price-after {
+  font-size: rem(32);
+  color: $accent-color;
+
+  @include mq("md") {
+    font-size: rem(40);
+  }
+}
+
+.cardSwiper {
+  padding-bottom: rem(10);
+}

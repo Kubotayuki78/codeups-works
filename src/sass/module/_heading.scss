@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.heading {
+  text-align: center;
+}
+
+.heading__title-en {
+  font-weight: 400;
+  font-size: rem(32);
+  font-family: $english-family;
+  line-height: 1;
+  letter-spacing: 0.01em;
+
+  @include mq("md") {
+    font-size: rem(40);
+  }
+}
+
+
+.heading__title-en::first-letter {
+  text-transform: uppercase;
+  color: $accent-color;
+}
+
+.heading__title-ja {
+  color: $accent-color;
+  font-size: rem(12);
+  line-height: 1;
+  margin-top: rem(10);
+  font-weight: 400;
+
+  @include mq("md") {
+    margin-top: rem(9);
+  }
+}
