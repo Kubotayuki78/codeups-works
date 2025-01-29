@@ -58,13 +58,9 @@
 
 .voice__cards {
   margin-top: rem(46);
-  gap: rem(40);
-  display: grid;
 
   @include mq("md") {
-    grid-template-columns: repeat(2, 1fr);
     margin-top: rem(33);
-    flex-direction: row;
   }
 }
 
