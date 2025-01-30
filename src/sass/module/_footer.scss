@@ -1,15 +1,13 @@
 @use "global" as *;
 .footer {
-  background: $accent-color;
-  color: $white;
   padding-top: rem(48);
   padding-bottom: rem(56);
-  margin-top: rem(103);
+  background: $accent-color;
+  color: $white;
 
   @include mq("md") {
     padding-top: rem(80);
     padding-bottom: rem(80);
-    margin-top: rem(160);
   }
 }
 
@@ -48,7 +46,6 @@
   width: rem(22);
   height: rem(22);
   transition: opacity 0.3s ease;
-
 
   @include mq("md") {
     width: rem(32);

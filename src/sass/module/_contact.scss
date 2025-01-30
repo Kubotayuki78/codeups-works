@@ -1,12 +1,7 @@
 @use "global" as *;
 
 .contact {
-  margin-top: rem(80);
   filter: drop-shadow(rem(0) rem(3) rem(1) #ccc);
-
-  @include mq("md") {
-    margin-top: rem(140);
-  }
 }
 
 .contact::after {
@@ -61,7 +56,7 @@
     box-shadow: rem(4) rem(4) rem(10) rem(0) rgba(0, 0, 0, 0.25);
     padding: rem(80) rem(50);
     position: relative;
-    margin-bottom: rem(10);
+    // margin-bottom: rem(10);
   }
 }
 
