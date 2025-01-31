@@ -229,11 +229,16 @@
           <h2 class="heading__title-ja">キャンペーン</h2>
         </div>
         <div class="campaign__inner inner">
-          <div class="campaign__cards campaign-cards">
-            <div class="swiper js-cardSwiper">
+          <!-- 前後の矢印 -->
+          <div class="campaign-swiper-arrow">
+            <div class="swiper-button-prev campaign-swiper-arrow__prev"></div>
+            <div class="swiper-button-next campaign-swiper-arrow__next"></div>
+          </div>
+          <div class="campaign__cards">
+            <div class="swiper campaign-cards js-cardSwiper">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="campaign-cards__card campaign-card">
+                <div class="swiper-slide campaign-cards__card">
+                  <div class="campaign-card">
                     <figure class="campaign-card__image">
                       <img
                         src="./assets/images/common/campaign1.jpg"
@@ -255,8 +260,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="campaign-cards__card campaign-card">
+                <div class="swiper-slide campaign-cards__card">
+                  <div class="campaign-card">
                     <figure class="campaign-card__image">
                       <img
                         src="./assets/images/common/campaign2.jpg"
@@ -278,8 +283,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="campaign-cards__card campaign-card">
+                <div class="swiper-slide campaign-cards__card">
+                  <div class="campaign-card">
                     <figure class="campaign-card__image">
                       <img
                         src="./assets/images/common/campaign3.jpg"
@@ -301,8 +306,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide campaign__card">
-                  <div class="campaign-cards__card campaign-card">
+                <div class="swiper-slide campaign-cards__card">
+                  <div class="campaign-card">
                     <figure class="campaign-card__image">
                       <img
                         src="./assets/images/common/campaign4.jpg"
@@ -324,8 +329,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="campaign-cards__card campaign-card">
+                <div class="swiper-slide campaign-cards__card">
+                  <div class="campaign-card">
                     <figure class="campaign-card__image">
                       <img
                         src="./assets/images/common/campaign4.jpg"
@@ -347,18 +352,7 @@
                     </div>
                   </div>
                 </div>
-                <!-- /.swiper-slide -->
               </div>
-              <!-- /.swiper-wrapper -->
-            </div>
-            <!-- /.swiper -->
-          </div>
-          <!-- /.campaign__cards campaign-cards -->
-          <!-- 前後の矢印 -->
-          <div class="campaign-swiper-arrow">
-            <div class="campaign-swiper-arrow__wrapper">
-              <div class="swiper-button-prev campaign-swiper-arrow__prev"></div>
-              <div class="swiper-button-next campaign-swiper-arrow__next"></div>
             </div>
           </div>
         </div>
@@ -506,8 +500,7 @@
           </div>
         </div>
       </section>
-      
-      
+
       <section class="voice top-voice">
         <div class="voice__inner inner">
           <div class="voice__heading heading">

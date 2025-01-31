@@ -15,15 +15,9 @@
 
   @include mq("md") {
     display: flex;
-  }
-}
-
-.campaign-swiper-arrow__wrapper {
-  @include mq("md") {
-    display: flex;
     flex-direction: column;
     position: absolute;
-    right: rem(15);
+    right: calc(50% - min(49%, rem(550)));
     top: rem(-83);
     width: rem(260);
   }
