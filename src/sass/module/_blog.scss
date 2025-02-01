@@ -49,28 +49,28 @@
   margin-top: rem(6);
 
   @include mq("md") {
-    color: white;
+    // color: white;
     margin-top: 0;
   }
 }
 
-.blog-heading__title-en {
-  @include mq("md") {
-    color: white;
-  }
-}
+// .blog-heading__title-en {
+//   @include mq("md") {
+//     color: white;
+//   }
+// }
 
-.heading__title-en.blog-heading__title-en::first-letter {
-  @include mq("md") {
-    color: white;
-  }
-}
+// .heading__title-en.blog-heading__title-en::first-letter {
+//   @include mq("md") {
+//     color: white;
+//   }
+// }
 
-.blog-heading__title-ja {
-  @include mq("md") {
-    color: white;
-  }
-}
+// .blog-heading__title-ja {
+//   @include mq("md") {
+//     color: white;
+//   }
+// }
 
 .blog__cards {
   margin-top: rem(32);

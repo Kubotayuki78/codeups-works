@@ -1,0 +1,54 @@
+@use "global" as *;
+.page-campaign__tags {
+  margin-top: rem(52);
+  display: grid;
+  gap: rem(16) rem(21);
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+
+  @include mq("md") {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.page-campaign__tags::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(120); /*画像の幅*/
+  height: rem(55); /*画像の高さ*/
+  background-image: url("../images/common/deco-fishes-to-right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  top: rem(-24);
+  left: calc(50% - min(48%, rem(500)));
+}
+
+.page-campaign__tag {
+  display: inline-block;
+  padding: rem(6) rem(10);
+  text-align: center;
+  background-color: $white;
+  border: 1px solid $accent-color;
+}
+
+.page-campaign__tag.tag-active {
+  background-color: $accent-color;
+}
+
+.page-campaign__tag a {
+  color: $accent-color;
+  font-size: rem(14);
+  line-height: 1.57;
+}
+
+.page-campaign__tag.tag-active a {
+  color: $white;
+}
+
+.page-campaign__cards {
+  margin-top: rem(40);
+  margin-right: rem(32);
+  margin-left: rem(32);
+}

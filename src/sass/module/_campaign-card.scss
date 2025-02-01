@@ -121,3 +121,29 @@
 .cardSwiper {
   padding-bottom: rem(10);
 }
+
+.campaign-card__page-block {
+  margin-top: rem(24);
+}
+
+.campaign-card__page-description {
+  line-height: 1.5;
+}
+
+.campaign-card__page-span {
+  margin-top: rem(32);
+  color: $accent-color;
+  line-height: 1.125;
+  font-weight: $bold;
+}
+
+.campaign-card__page-text {
+  margin-top: rem(7);
+  color: $accent-color;
+  font-size: rem(14);
+  line-height: 1.28;
+}
+
+.campaign-card__button {
+  margin-top: rem(16);
+}

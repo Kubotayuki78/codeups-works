@@ -22,6 +22,17 @@
   color: $accent-color;
 }
 
+.heading__title-en.heading__title-en--white {
+
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.heading__title-en.heading__title-en--white::first-letter {
+  color: $white;
+}
+
 .heading__title-ja {
   color: $accent-color;
   font-size: rem(12);
@@ -32,4 +43,18 @@
   @include mq("md") {
     margin-top: rem(9);
   }
+}
+
+.heading__title-ja.heading__title-ja--white {
+  @include mq("md") {
+    color: $white;
+  };
+}
+
+.heading__title-en.heading__title-en--large {
+  font-size: rem(80);
+}
+
+.heading__title-ja.heading__title-ja--large {
+  margin-top: rem(-2);
 }
