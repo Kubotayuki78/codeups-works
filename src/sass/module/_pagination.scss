@@ -1,36 +1,57 @@
 @use "global" as *;
+
 .pagination {
   display: flex;
   align-items: center;
-  padding: 10px;
   justify-content: center;
 }
-.pagination img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-.pagination a {
-  text-decoration: none;
-  color: #0073e6;
-  padding: 8px 12px;
-  border: 1px solid #0073e6;
-  border-radius: 5px;
-}
-.pagination a:hover {
-  background-color: #0073e6;
-  color: #fff;
-}
-.u-desktop {
-  display: none;
+
+.pagination-list {
+  display: flex;
+  gap: rem(12);
 }
 
-.pagination img:first-child {
-  margin-right: 40px;
+.pagination svg {
+  width: 10px;
+  height: 18px;
+  cursor: pointer;
+  transition: stroke 0.3s ease;
 }
-.pagination img:last-child {
-  margin-left: 40px;
+
+.pagination svg path {
+  stroke: #408f95;
+  transition: stroke 0.3s ease;
 }
+
+@media (any-hover: hover) {
+  .pagination svg:hover path {
+    stroke: $white;
+  }
+}
+
 .pagination a {
-  margin: 0 6px;
+  color: $accent-color;
+  padding: rem(7) rem(12);
+  background-color: $white;
+  border: 1px solid $accent-color;
+  transition: background-color 0.3s color 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .pagination a:hover {
+    background-color: $accent-color;
+    color: #fff;
+  }
+}
+
+.pagination-prev {
+  border: 1px solid #408f95; /* 枠の色 */
+  padding: rem(7) rem(12); /* 枠とSVGの間の余白 */
+  margin-right: rem(40);
+}
+
+.pagination-next {
+  border: 1px solid #408f95; /* 枠の色 */
+  padding: rem(7) rem(12); /* 枠とSVGの間の余白 */
+  margin-left: rem(40);
 }
