@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.page-info__tags {
+  margin-top: rem(121);
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(500);
+
+  @include mq("md") {
+    gap: rem(90);
+    margin-top: rem(150);
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+
+.page-info__tag {
+  display: inline-block;
+  padding: rem(10);
+  text-align: center;
+  background: $accent-color;
+  box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+  background: #ddf0f1;
+  color: $accent-color;
+  font-size: rem(14);
+  transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+  .page-info__tag:hover {
+    color: $white;
+    background-color: $accent-color;
+  }
+}
+
+.page-info__tag.tag-active {
+  color: $white;
+  background-color: $accent-color;
+}
+
+.page-info__cards {
+  margin-top: rem(16);
+
+  @include mq("md") {
+    margin-top: rem(24);
+}
+}
