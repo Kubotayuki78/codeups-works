@@ -6,6 +6,10 @@
 .page-fv__image {
   aspect-ratio: 375/460;
   overflow: hidden;
+
+  @include mq("md") {
+    aspect-ratio: 1440/548;
+  }
 }
 
 .page-fv__image img {
@@ -23,8 +27,12 @@
 }
 
 .page-fv__heading h2 {
-  color: #FFF;
+  color: #fff;
   font-family: Lato;
   font-size: rem(40);
   font-weight: 400;
+
+  @include mq("md") {
+    font-size: rem(80);
+  }
 }

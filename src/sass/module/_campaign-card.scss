@@ -60,7 +60,7 @@
   text-align: center;
   margin-top: auto;
   padding-inline: rem(16);
-  padding-bottom: rem(16);
+  padding-bottom: rem(23);
 
   @include mq("md") {
     padding-bottom: rem(38);
@@ -68,7 +68,7 @@
 }
 
 .campaign-card__text {
-  margin-top: rem(16);
+  margin-top: rem(9);
   font-size: rem(14);
   text-align: center;
 
@@ -128,6 +128,7 @@
 
 .campaign-card__page-description {
   line-height: 1.5;
+  text-align: left;
 }
 
 .campaign-card__page-span {
@@ -146,4 +147,14 @@
 
 .campaign-card__button {
   margin-top: rem(16);
+}
+
+.campaign-card__foot--page {
+  padding-left: rem(24);
+  padding-right: rem(24);
+}
+
+.campaign-card__padding24 {
+  padding-right: rem(24);
+  padding-left: rem(24);
 }

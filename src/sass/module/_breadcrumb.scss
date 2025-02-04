@@ -1,35 +1,36 @@
-@use 'global' as *;
-
+@use "global" as *;
 .breadcrumb {
-  list-style: none;
+  margin-top: rem(5);
+  padding-left: rem(5);
+}
+
+.breadcrumb ul {
   display: flex;
-  padding-top: rem(10);
+  gap: rem(20);
 }
 
-.breadcrumb-item {
-  margin-right: rem(10);
+.breadcrumb li {
+  position: relative;
 }
 
-.breadcrumb-item a {
-  transition: color 0.3s ease;
+.breadcrumb li:not(:last-child)::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(4); /*画像の幅*/
+  height: rem(8); /*画像の高さ*/
+  background-image: url(../images/common/breadcrumb-arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  top: rem(10);
+  right: rem(-12);
 }
 
-.breadcrumb-item a:hover {
-  color: $accent-color;
+.breadcrumb a {
+  font-size: rem(14);
 }
 
-.breadcrumb-item::after {
-  content: ">";
-  margin-left: rem(10);
-  color: #6c757d;
-}
-
-.breadcrumb-item:last-child::after {
-  content: "";
-  margin: 0;
-}
-
-.breadcrumb-item.active {
-  color: #6c757d;
-  font-weight: bold;
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
