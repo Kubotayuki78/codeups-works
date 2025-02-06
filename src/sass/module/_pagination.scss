@@ -1,55 +1,5 @@
 @use "global" as *;
 
-// .pagination {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .pagination-list {
-//   display: flex;
-//   gap: rem(12);
-// }
-
-// .pagination svg {
-//   width: 10px;
-//   height: 18px;
-//   cursor: pointer;
-//   transition: stroke 0.3s ease;
-// }
-
-// .pagination svg path {
-//   stroke: #408f95;
-//   transition: stroke 0.3s ease;
-// }
-
-// @media (any-hover: hover) {
-//   .pagination svg:hover path {
-//     stroke: $white;
-//   }
-// }
-
-// @media (any-hover: hover) {
-//   .pagination a:hover {
-//     background-color: $accent-color;
-//     color: #fff;
-//   }
-// }
-
-// .pagination-prev {
-//   border: 1px solid #408f95; /* 枠の色 */
-//   padding: rem(7) rem(12); /* 枠とSVGの間の余白 */
-//   margin-right: rem(40);
-//   background-color: #fff;
-//   transform: background-color 0.3s ease;
-// }
-
-// .pagination-next {
-//   border: 1px solid #408f95; /* 枠の色 */
-//   padding: rem(7) rem(12); /* 枠とSVGの間の余白 */
-//   margin-left: rem(40);
-// }
-
 .wp-pagenavi {
   text-align: center;
   display: flex;
@@ -100,6 +50,8 @@
   padding: rem(7) rem(12); /* 枠とSVGの間の余白 */
   transition: background-color 0.3s ease;
   background-color: $white;
+  width: rem(38);
+  height: rem(38);
 }
 
 .previouspostslink {

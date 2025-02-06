@@ -18,7 +18,9 @@
 }
 
 .page-info__tag {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: rem(10);
   text-align: center;
   background: $accent-color;
@@ -27,12 +29,43 @@
   color: $accent-color;
   font-size: rem(14);
   transition: all 0.3s ease;
+
+  @include mq("md") {
+    min-height: rem(90);
+    min-width: rem(300);
+    font-size: rem(24);
+    position: relative;
+    padding-left: rem(72);
+  }
+}
+
+.page-info__tag::before {
+  @include mq("md") {
+    content: ""; /*何も入れない*/
+    position: absolute;
+    display: inline-block;
+    width: rem(64); /*画像の幅*/
+    height: rem(64); /*画像の高さ*/
+    background-image: url("../images/common/whale.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    left: rem(30);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+  }
 }
 
 @media (hover: hover) {
   .page-info__tag:hover {
     color: $white;
     background-color: $accent-color;
+  }
+
+  .page-info__tag:hover::before {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%)
+      hue-rotate(124deg) brightness(107%) contrast(100%);
   }
 }
 
@@ -41,10 +74,15 @@
   background-color: $accent-color;
 }
 
+.page-info__tag.tag-active::before {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%)
+    hue-rotate(124deg) brightness(107%) contrast(100%);
+}
+
 .page-info__cards {
   margin-top: rem(16);
 
   @include mq("md") {
     margin-top: rem(24);
-}
+  }
 }

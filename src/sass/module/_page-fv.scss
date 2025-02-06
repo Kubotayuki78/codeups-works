@@ -24,6 +24,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+
+  @include mq("md") {
+    top: 59%;
+  }
 }
 
 .page-fv__heading h2 {

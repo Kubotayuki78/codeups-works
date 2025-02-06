@@ -1,4 +1,4 @@
-@use 'global' as *;
+@use "global" as *;
 .page-wrapper {
   position: relative;
 }
@@ -22,4 +22,9 @@
     top: rem(56);
     left: calc(50% - min(48%, rem(640)));
   }
+}
+
+.page-wrapper--blog {
+  margin-left: auto;
+  margin-right: auto;
 }

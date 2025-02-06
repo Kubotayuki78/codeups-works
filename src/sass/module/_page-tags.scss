@@ -1,0 +1,17 @@
+@use 'global' as *;
+
+.page-tags {
+  margin-top: rem(52);
+  display: grid;
+  gap: rem(16) rem(21);
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem(500);
+
+  @include mq("md") {
+    margin-top: rem(150);
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 100%;
+  }
+}

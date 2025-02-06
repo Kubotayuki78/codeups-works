@@ -9,13 +9,17 @@
   }
 }
 
-.blog-cards__card {
-  // background: $white;
-  // box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
-  // padding: rem(16) rem(16) rem(24) rem(16);
+.blog-cards--2col {
+  @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.blog-cards--gap42 {
+  gap: rem(42);
 
   @include mq("md") {
-    // margin-right: 0;
-    // margin-left: 0;
+    column-gap: rem(42);
+    row-gap: rem(80);
   }
 }

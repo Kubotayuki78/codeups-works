@@ -1,0 +1,17 @@
+@use "global" as *;
+.side-campaign {
+}
+
+.side-campaign__items {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.side-campaign__button {
+  text-align: center;
+  margin-top: rem(30);
+}

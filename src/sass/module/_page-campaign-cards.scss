@@ -12,3 +12,11 @@
     row-gap: rem(70);
   }
 }
+
+.page-campaign-cards__card--side {
+  gap: rem(32);
+
+  @include mq("md") {
+    gap: rem(30);
+  }
+}

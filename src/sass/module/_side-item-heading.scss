@@ -1,0 +1,31 @@
+@use "global" as *;
+.side-item-heading {
+  position: relative;
+  display: inline-block;
+  border-left: rem(8) solid $accent-color;
+  padding-left: rem(74);
+  padding-top: rem(9);
+  padding-bottom: rem(6);
+}
+
+.side-item-heading::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(42); /*画像の幅*/
+  height: rem(42); /*画像の高さ*/
+  background-image: url("../images/common/whale.png");
+  filter: brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(5975%) hue-rotate(159deg) brightness(98%) contrast(92%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  left: rem(20);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.side-item-heading h3 {
+  font-size: rem(24);
+  font-weight: 400;
+}
