@@ -1,8 +1,39 @@
 @use "global" as *;
-.page-contact {
-  margin-top: rem(106);
+.contact__title {
+}
+
+.contact__form {
+  margin-top: rem(52);
 
   @include mq("md") {
-    margin-top: rem(140);
+    margin-top: rem(150);
+    max-width: rem(700);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact__field {
+}
+
+.contact__privacy {
+  margin-top: 29px;
+  display: flex;
+  justify-content: center;
+  margin-left: rem(30);
+}
+
+.contact__button {
+  margin-top: 29px;
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: 38px;
   }
 }

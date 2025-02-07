@@ -1,0 +1,215 @@
+@use "global" as *;
+.form-field {
+  border-bottom: 1px dashed $accent-color;
+  padding-bottom: rem(24);
+
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.form-field__head {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+
+  @include mq("md") {
+    width: rem(220);
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.form-field__label {
+  font-weight: $bold;
+}
+
+.form-field__tag {
+  display: inline-block;
+  background: #c94800;
+  padding: rem(2) rem(16);
+  color: $white;
+  font-size: rem(12);
+  letter-spacing: rem(4.8);
+}
+
+.form-field__item {
+  margin-top: rem(16);
+  flex-grow: 1;
+
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.form-field__item--select {
+  position: relative;
+}
+
+.form-field__item--select::after {
+  content: "";
+  position: absolute;
+  top: rem(12);
+  right: rem(9);
+  background: $accent-color;
+  height: calc(tan(60deg) * rem(12) / 2);
+  width: rem(12);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.form-text {
+  width: 100%;
+  border: 1px solid #408f95;
+  background: $white;
+  padding: calc(rem(8) - rem(1)) calc(rem(16) - rem(1));
+  transition: border-color 0.3s;
+}
+
+.from-radio {
+  line-height: calc(23 / 16);
+}
+
+.form-text::placeholder {
+  color: rgba(221, 240, 241, 1);
+  opacity: 1;
+}
+
+.from-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.from-radio__input:checked + .from-radio__text::after {
+  opacity: 1;
+}
+
+.from-radio__text {
+  padding-left: rem(22);
+  position: relative;
+}
+
+.from-radio__text::before,
+.from-radio__text::after {
+  content: "";
+  position: absolute;
+}
+
+.from-radio__text::before {
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(14);
+  height: rem(14);
+  border: rem(1) solid $accent-color;
+  left: 0;
+  transition: border-color 0.3s;
+}
+
+.from-radio__text::after {
+  left: rem(3);
+  opacity: 0;
+  width: rem(9);
+  height: rem(5);
+  border-left: rem(2) solid #c94800;
+  border-bottom: rem(2) solid #c94800;
+  transform: rotate(-45deg);
+  top: rem(8);
+}
+
+.form-select {
+  appearance: none;
+  width: 100%;
+  border: rem(1) solid $accent-color;
+  background: $white;
+  padding: calc(rem(11) - rem(1)) calc(rem(20) - rem(1)) calc(rem(12) - rem(1))
+    calc(rem(8)) - rem(1);
+  font-size: rem(12);
+}
+
+.form-textarea {
+  border: 1px solid $accent-color;
+  background: #fff;
+  width: 100%;
+  height: rem(200);
+  padding: rem(8);
+  transition: border-color 0.3s;
+}
+
+.form-field__radios {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+}
+
+.form-field__radio {
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+  &:checked {
+    + .form-checkbox__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.form-checkbox__text {
+  position: relative;
+  font-size: rem(14);
+  line-height: 1.57;
+  text-align: left;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    width: rem(22);
+    height: rem(22);
+    border: rem(1) solid $accent-color;
+    transition: border-color 0.3s;
+    top: 0;
+    left: rem(-25);
+
+    @include mq("md") {
+      margin-top: 2px;
+    }
+  }
+
+  &::after {
+    opacity: 0;
+    width: rem(14);
+    height: rem(8);
+    border-left: rem(2) solid #c94800;
+    border-bottom: rem(2) solid #c94800;
+    transform: rotate(-45deg);
+    left: rem(-20);
+    top: rem(5);
+
+    @include mq("md") {
+      margin-top: 0.8px;
+    }
+  }
+
+  a {
+    text-decoration-line: underline;
+    font-weight: 700;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #f5810e;
+    }
+  }
+}

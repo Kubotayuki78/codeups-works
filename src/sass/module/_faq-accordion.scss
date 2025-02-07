@@ -1,0 +1,85 @@
+@use "global" as *;
+.faq-accordion {
+}
+
+.faq-accordion__container {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.faq-accordion__item {
+  @include mq("md") {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+}
+
+.faq-accordion__title {
+  color: #fff;
+  cursor: pointer;
+  padding: rem(16);
+  font-weight: 400;
+  font-size: rem(16);
+}
+
+.faq-accordion__content {
+  display: none;
+  padding: rem(24) rem(16);
+}
+
+.faq-accordion__content p {
+}
+
+/* タイトルの背景色 */
+.faq-accordion__item .faq-accordion__title {
+  background-color: $accent-color;
+}
+
+/* コンテンツボックスの枠線 */
+.faq-accordion__item .faq-accordion__content {
+  border-bottom: rem(1) solid $accent-color;
+  border-left: rem(1) solid $accent-color;
+  border-right: rem(1) solid $accent-color;
+
+  @include mq("md") {
+    border-top: rem(1) solid $accent-color;
+  }
+}
+
+/* 矢印 */
+.faq-accordion__title {
+  position: relative;
+}
+/* 縦線 */
+.faq-accordion__title::before {
+  background: #fff; /* 線の色 */
+  content: "";
+  height: 2px; /* 線の太さ */
+  position: absolute;
+  right: 25px;
+  top: 50%; /* 線の位置を縦中央に */
+  transform: rotate(90deg); /* 線を縦に */
+  transition: transform 0.3s ease-in-out;
+  width: 15px; /* 線の幅 */
+}
+/* 横線 */
+.faq-accordion__title::after {
+  background: #fff; /* 線の色 */
+  content: "";
+  height: 2px; /* 線の太さ */
+  position: absolute;
+  right: 25px;
+  top: 50%; /* 線の位置を縦中央に */
+  transition: opacity 0.3s ease-in-out;
+  width: 15px; /* 線の幅 */
+}
+/* 縦線(クリック後) */
+.faq-accordion__title.open::before {
+  transform: rotate(180deg);
+}
+/* 横線(クリック後) */
+.faq-accordion__title.open::after {
+  opacity: 0;
+}

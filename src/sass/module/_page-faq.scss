@@ -1,0 +1,12 @@
+@use "global" as *;
+.page-faq__accordion {
+  margin-inline: auto;
+  max-width: rem(500);
+  position: relative;
+  width: 100%;
+  margin-top: rem(52);
+
+  @include mq("md") {
+    max-width: rem(700);
+  }
+}

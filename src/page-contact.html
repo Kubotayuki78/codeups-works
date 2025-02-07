@@ -149,213 +149,202 @@
     </header>
 
     <main>
-      <section class="page-about__fv page-fv">
+      <section class="page-contact__fv page-fv">
         <div class="page-fv__image">
           <picture class="">
             <source
               media="(min-width: 768px)"
-              srcset="./assets/images/about-page/aboutus-fv-pc.jpg"
+              srcset="./assets/images/contact-page/contact-fv-pc.jpg"
             />
             <img
-              src="./assets/images/about-page/aboutus-fv-sp.jpg"
+              src="./assets/images/contact-page/contact-fv-sp.jpg"
               alt=""
               decoding="async"
             />
           </picture>
         </div>
         <div class="page-fv__heading">
-          <h2>About us</h2>
+          <h2>Contact</h2>
         </div>
       </section>
       <div class="page-wrapper">
-        <div class="page-about__inner inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb Navigation">
+        <div class="page-faq__inner inner">
+          <nav class="breadcrumb">
             <ul>
               <li><a href="#">TOP</a></li>
-              <li><a href="#">私たちについて</a></li>
+              <li><a href="#">お問い合わせ</a></li>
             </ul>
           </nav>
 
-          <div class="page-about">
-            <div class="about__images">
-              <div class="about__image1 about__image1--page">
-                <img
-                  src="./assets/images/common/aboutus-1.jpg"
-                  alt="海の中の黄色い魚の画像"
-                />
-              </div>
-              <div class="about__image2 about__image2--page">
-                <img
-                  src="./assets/images/common/aboutus-2.jpg"
-                  alt="瓦屋根とシーサーの画像"
-                />
-              </div>
-              <h3 class="about__images-page-title u-mobile">
-                Dive into<br />
-                the Ocean
-              </h3>
-            </div>
-
-            <div class="about__content about__content--page">
-              <h3 class="about__title u-desktop">
-                Dive into<br />
-                the Ocean
-              </h3>
-              <div class="about__body">
-                <div class="about__text about__text--page">
-                  <p>
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<span
-                      class="about__text-br"
-                      >が入ります。</span
+          <form class="contact__form">
+            <div class="contact__fields">
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-name" class="form-field__label"
+                      >お名前</label
                     >
-                  </p>
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      class="form-text"
+                      type="text"
+                      name="your-name"
+                      id="your-name"
+                      placeholder="沖縄　太郎"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-email" class="form-field__label"
+                      >メールアドレス</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      class="form-text"
+                      type="email"
+                      name="your-email"
+                      id="your-email"
+                      placeholder="aaa000@ggmail.com"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-tell" class="form-field__label"
+                      >電話番号</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <input
+                      class="form-text"
+                      type="text"
+                      name="your-tell"
+                      id="your-tell"
+                      placeholder="000-0000-0000"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <div class="form-field__label">お問い合わせ項目</div>
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <div class="form-field__radios">
+                      <label class="form-field__radio from-radio">
+                        <input
+                          class="from-radio__input"
+                          type="checkbox"
+                          name="your-name"
+                        />
+                        <span class="from-radio__text"
+                          >ダイビング講習について</span
+                        >
+                      </label>
+                      <label class="form-field__radio from-radio">
+                        <input
+                          class="from-radio__input"
+                          type="checkbox"
+                          name="your-name"
+                        />
+                        <span class="from-radio__text"
+                          >ファンデイビングについて</span
+                        >
+                      </label>
+                      <label class="form-field__radio from-radio">
+                        <input
+                          class="from-radio__input"
+                          type="checkbox"
+                          name="your-name"
+                        />
+                        <span class="from-radio__text"
+                          >体験ダイビングについて</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-age" class="form-field__label"
+                      >キャンペーン</label
+                    >
+                  </div>
+                  <div class="form-field__item form-field__item--select">
+                    <select name="your-age" id="your-age" class="form-select">
+                      <option value="">キャンペーン内容を選択</option>
+                      <option value="">オプション</option>
+                      <option value="">オプション</option>
+                      <option value="">オプション</option>
+                      <option value="">オプション</option>
+                      <option value="">オプション</option>
+                      <option value="">オプション</option>
+                      <option value="">オプション</option>
+                      <option value="">オプション</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__field">
+                <div class="form-field">
+                  <div class="form-field__head">
+                    <label for="your-message" class="form-field__label"
+                      >お問い合わせ内容</label
+                    >
+                    <span class="form-field__tag">必須</span>
+                  </div>
+                  <div class="form-field__item">
+                    <textarea
+                      name="your-message"
+                      id="your-message"
+                      class="form-textarea"
+                      cols="30"
+                      rows="10"
+                    ></textarea>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="about__gallery about-gallery">
-            <div class="about-gallery__heading heading">
-              <p class="heading__title-en">gallery</p>
-              <h2 class="heading__title-ja">フォト</h2>
+            <div class="contact__privacy">
+              <label class="form-checkbox">
+                <input
+                  type="checkbox"
+                  name="your-privacy"
+                  class="form-checkbox__input"
+                />
+                <span class="form-checkbox__text"
+                  >個人情報の取り扱いについて同意のうえ<br
+                    class="u-mobile"
+                  />送信します。</span
+                >
+              </label>
             </div>
 
-            <div class="about-gallery__items">
-              <div
-                class="about-gallery__item1 about-gallery__item--large js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery1.jpg"
-                  alt="ギャラリー画像1"
-                  width="345"
-                  height="523"
-                  loading="lazy"
-                />
-              </div>
-
-              <div
-                class="about-gallery__item2 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery2.jpg"
-                  alt="ギャラリー画像2"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item3 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery3.jpg"
-                  alt="ギャラリー画像3"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item4 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery4.jpg"
-                  alt="ギャラリー画像4"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item5 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery5.jpg"
-                  alt="ギャラリー画像5"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item6 about-gallery__item--large js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery6.jpg"
-                  alt="ギャラリー画像6"
-                  width="345"
-                  height="523"
-                  loading="lazy"
-                />
-              </div>
+            <div class="contact__button">
+              <button class="btn btn--send" type="submit">
+                <span>Send</span>
+              </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-
-      <div class="modal">
-        <div class="modal-inner">
-          <!-- モーダル本体 -->
-          <div class="modal__wrapper">
-            <div class="modal__layer"></div>
-            <div class="modal__container">
-              <!-- モーダルを閉じるボタン -->
-              <div class="modal__close"></div>
-              <!-- / モーダルを閉じるボタン -->
-
-              <!-- モーダル内のコンテンツ -->
-              <div class="modal__content"></div>
-              <!-- / モーダル内のコンテンツ -->
-            </div>
-          </div>
-          <!-- / モーダル本体 -->
-        </div>
-      </div>
-
-      <section class="contact page-contact--foot">
-        <div class="contact__inner inner">
-          <div class="contact__wrapper">
-            <div class="contact__left">
-              <h3 class="contact__logo">
-                <img src="./assets/images/common/logo-blue.png" alt="CodeUps" />
-              </h3>
-              <div class="contact__body">
-                <address class="contact__body-address">
-                  <p>沖縄県那覇市1-1</p>
-                  <p>TEL:0120-000-0000</p>
-                  <p>営業時間:8:30-19:00</p>
-                  <p>定休日:毎週火曜日</p>
-                </address>
-                <div class="contact__body-map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.7606915130673!2d127.8028896098996!3d26.33424747690068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5120bd0d05b55%3A0x8a19806436e233b3!2z5rKW57iE5biC5b255omA!5e0!3m2!1sja!2sjp!4v1735902344642!5m2!1sja!2sjp"
-                    width="600"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="contact__right">
-              <div class="contact__heading heading">
-                <p class="heading__title-en heading__title-en--large">
-                  contact
-                </p>
-                <h2 class="heading__title-ja heading__title-ja--large">
-                  お問合せ
-                </h2>
-              </div>
-              <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-              <div class="contact__button">
-                <a href="" class="btn"><span>Contact us</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <div class="to-top js-to-top">
