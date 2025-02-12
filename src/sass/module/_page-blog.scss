@@ -7,8 +7,31 @@
   }
 }
 
+.page-blog__content--page {
+  margin-top: rem(44);
+}
+
 .page-blog__pagination {
+  width: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
   margin-top: rem(80);
+
+  @include mq("md") {
+    margin-top: rem(84);
+  }
+}
+
+.page-blog__pagination--page {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: rem(78);
+  }
+}
+
+.wp-pagenavi.page-blog__pagination--page {
+  gap: rem(25);
 }
 
 .page-blog__date {
@@ -26,6 +49,7 @@
 
   @include mq("md") {
     font-size: rem(32);
+    padding-bottom: rem(0);
   }
 }
 
@@ -34,6 +58,7 @@
 
   @include mq("md") {
     margin-top: rem(40);
+    width: 99%;
   }
 }
 
@@ -68,7 +93,7 @@
 .page-blog__list-item {
   display: flex;
   align-items: center;
-  gap: rem(4);
+  gap: rem(10);
 }
 
 .page-blog__list-item::before {

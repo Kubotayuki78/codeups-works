@@ -1,0 +1,83 @@
+@use "global" as *;
+.page-404__background-color {
+  background-color: $accent-color;
+}
+
+.page-404 {
+  padding-top: rem(80);
+  padding-bottom: rem(40);
+  color: $white;
+  position: relative;
+
+  @include mq("md") {
+    padding-top: rem(90);
+    padding-bottom: rem(148);
+  }
+}
+
+.page-404::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  background-image: url("../images/common/whale-404.png");
+  background-repeat: no-repeat;
+  background-position: center rem(25);
+  background-size: contain;
+  width: rem(328);
+  height: 100%;
+  top: rem(84);
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include mq("md") {
+    width: rem(665);
+    left: calc(50% - rem(522));
+    transform: translateX(0);
+    top: rem(126);
+  }
+}
+
+.page-wrapper {
+}
+
+.page-404__inner {
+}
+
+.page-404__contents {
+}
+.page-404__title {
+  color: $white;
+  font-family: Lato;
+  font-size: rem(80);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  text-align: center;
+  margin-top: rem(52);
+
+  @include mq("md") {
+    margin-top: rem(119);
+    font-size: rem(160);
+  }
+}
+
+.page-404__text {
+  font-family: Lato;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: rem(-4);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.page-404__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}

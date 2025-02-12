@@ -21,15 +21,16 @@
   background-color: $accent-color;
   // flex: 1;
   width: 100%;
-  padding: rem(8);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: rem(8);
+  height: rem(40);
 
   @include mq("md") {
     flex-direction: column-reverse;
     width: 28.4%;
+    height: auto;
   }
 }
 
@@ -63,15 +64,21 @@
 .page-price-list__table th,
 .page-price-list__table td {
   border: 1px solid $accent-color;
-  padding: rem(5) rem(15);
+  padding: rem(6) rem(15);
+  height: rem(60);
 
   @include mq("md") {
     padding: rem(17) rem(15);
+    height: auto;
   }
+}
+
+.page-price-list__table td {
 }
 
 .page-price-list__menu {
   text-align: center;
+  width: 69.5%;
 
   @include mq("md") {
     width: 67.8%;
@@ -81,6 +88,7 @@
 
 .page-price-list__price {
   text-align: right;
+  width: 30.5%;
 
   @include mq("md") {
     width: 32.2%;

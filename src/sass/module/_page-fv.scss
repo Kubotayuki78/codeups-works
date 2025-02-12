@@ -24,6 +24,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  text-align: center;
 
   @include mq("md") {
     top: 59%;
@@ -35,6 +36,8 @@
   font-family: Lato;
   font-size: rem(40);
   font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
 
   @include mq("md") {
     font-size: rem(80);

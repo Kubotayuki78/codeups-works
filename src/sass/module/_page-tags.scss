@@ -10,8 +10,9 @@
   max-width: rem(500);
 
   @include mq("md") {
-    margin-top: rem(150);
-    grid-template-columns: repeat(6, 1fr);
     max-width: 100%;
+    display: flex;
+    gap: rem(32);
+    margin-top: rem(150);
   }
 }

@@ -5,11 +5,12 @@
 .page-campaign-cards__card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: rem(40);
+  gap: rem(30);
 
   @include mq("md") {
     grid-template-columns: repeat(2, 1fr);
     row-gap: rem(70);
+    column-gap: rem(40);
   }
 }
 

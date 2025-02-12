@@ -72,10 +72,11 @@
 .about__image1--page img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 
   @include mq("md") {
     width: 82%;
-    top: rem(10);
+    top: rem(40);
   }
 }
 
@@ -175,6 +176,14 @@
   }
 }
 
-.about__text--page {
-  margin-top: rem(40);
+.about__text.about__text--page {
+  margin-top: rem(65);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.about__content.about__content--page {
+  margin-top: rem(110);
 }

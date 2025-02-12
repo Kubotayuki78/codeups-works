@@ -1,9 +1,9 @@
 @use "global" as *;
-.contact__title {
+.page-contact__title {
 }
 
-.contact__form {
-  margin-top: rem(52);
+.page-contact__form {
+  margin-top: rem(50);
 
   @include mq("md") {
     margin-top: rem(150);
@@ -13,27 +13,39 @@
   }
 }
 
-.contact__fields {
+.page-contact__fields {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: rem(22);
+
+  @include mq("md") {
+    gap: rem(39);
+  }
 }
 
-.contact__field {
+.page-contact__field {
 }
 
-.contact__privacy {
-  margin-top: 29px;
+.page-contact__privacy {
+  margin-top: rem(36);
   display: flex;
   justify-content: center;
   margin-left: rem(30);
 }
 
-.contact__button {
-  margin-top: 29px;
+.page-contact__button {
+  margin-top: rem(24);
   text-align: center;
 
   @include mq("md") {
     margin-top: 38px;
+  }
+}
+
+.page-contact__footer {
+  margin-top: rem(144);
+
+  @include mq("md") {
+    margin-top: rem(120);
   }
 }

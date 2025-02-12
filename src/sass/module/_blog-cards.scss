@@ -15,8 +15,8 @@
   }
 }
 
-.blog-cards--gap42 {
-  gap: rem(42);
+.blog-cards--gap40 {
+  gap: rem(40);
 
   @include mq("md") {
     column-gap: rem(42);

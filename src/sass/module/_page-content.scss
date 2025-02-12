@@ -17,6 +17,12 @@
   }
 }
 
+.page-content__main--page {
+  @include mq("md") {
+    margin-top: rem(-8);
+  }
+}
+
 .page-content__main-inner {
   width: 100%;
   padding-right: rem(15);
@@ -28,6 +34,11 @@
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+.page-content__main-inner--blog {
+  padding-right: rem(21);
+  padding-left: rem(21);
 }
 
 .page-content__side {

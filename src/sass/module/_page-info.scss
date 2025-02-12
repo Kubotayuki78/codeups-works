@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .page-info__tags {
-  margin-top: rem(121);
+  margin-top: rem(120);
   display: grid;
   gap: rem(20);
   grid-template-columns: repeat(3, 1fr);
@@ -18,41 +18,35 @@
 }
 
 .page-info__tag {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: rem(10);
-  text-align: center;
-  background: $accent-color;
-  box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
-  background: #ddf0f1;
   color: $accent-color;
+  background-color: #ddf0f1;
+  // flex: 1;
   font-size: rem(14);
+  box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 100%;
+  padding: rem(9) rem(10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(8);
   transition: all 0.3s ease;
 
   @include mq("md") {
-    min-height: rem(90);
-    min-width: rem(300);
     font-size: rem(24);
-    position: relative;
-    padding-left: rem(72);
+    padding: rem(12) rem(10);
   }
 }
 
 .page-info__tag::before {
   @include mq("md") {
     content: ""; /*何も入れない*/
-    position: absolute;
     display: inline-block;
     width: rem(64); /*画像の幅*/
     height: rem(64); /*画像の高さ*/
     background-image: url("../images/common/whale.png");
     background-repeat: no-repeat;
     background-size: contain;
-    vertical-align: middle;
-    left: rem(30);
-    top: 50%;
-    transform: translateY(-50%);
     transition: all 0.3s ease;
   }
 }
@@ -83,6 +77,6 @@
   margin-top: rem(16);
 
   @include mq("md") {
-    margin-top: rem(24);
+    margin-top: rem(26);
   }
 }

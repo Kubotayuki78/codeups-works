@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.page-sitemap-nav {
+}
+
+.page-sitemap-nav__section {
+  margin-top: rem(16);
+  column-count: 2;
+
+  @include mq("md") {
+    column-count: 4;
+    margin-top: rem(4);
+  }
+}
+
+.page-sitemap-nav__heading {
+  position: relative;
+}
+
+.page-sitemap-nav__heading::after {
+  content: "";
+  display: block;
+  width: rem(18);
+  height: rem(18);
+  background-image: url("../images/common/icon-black.png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: rem(21);
+  left: rem(2);
+}
+
+.page-sitemap-nav__heading a {
+  font-weight: $bold;
+  display: block;
+  padding: rem(21) rem(24);
+  line-height: 1;
+}
+@media (any-hover: hover) {
+  .page-sitemap-nav__heading a:hover,
+  .page-sitemap-nav__body li a:hover {
+    opacity: 0.6;
+  }
+}
+
+.page-sitemap-nav__body li a {
+  display: block;
+  padding: rem(13) rem(24);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.page-sitemap-nav__body li:nth-of-type(1) {
+  margin-top: rem(-8);
+}
+
+.page-sitemap-nav__body li:last-of-type {
+  margin-bottom: rem(8);
+}

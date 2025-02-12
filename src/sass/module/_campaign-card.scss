@@ -18,6 +18,12 @@
   }
 }
 
+.campaign-card__image--page {
+  @include mq("md") {
+    aspect-ratio: 335/223;
+  }
+}
+
 .campaign-card__image--side {
   aspect-ratio: 294/185; // 幅 / 高さ
 
@@ -82,6 +88,13 @@
 
   @include mq("md") {
     font-size: rem(16);
+    margin-top: rem(14);
+  }
+}
+
+.campaign-card__text.campaign-card__text--page {
+  @include mq("md") {
+    margin-top: rem(24);
   }
 }
 
@@ -99,6 +112,12 @@
   }
 }
 
+.campaign-card__price.campaign-card__price--page {
+  @include mq("md") {
+    gap: rem(40);
+  }
+}
+
 .campaign-card__price-before,
 .campaign-card__price-after {
   font-family: "Lato";
@@ -113,7 +132,7 @@
   text-decoration-thickness: rem(3); /* 線の太さ */
 
   @include mq("md") {
-    font-size: rem(20);
+    font-size: rem(24);
   }
 }
 
@@ -140,7 +159,7 @@
 }
 
 .campaign-card__page-span {
-  margin-top: rem(32);
+  margin-top: rem(30);
   color: $accent-color;
   line-height: 1.125;
   font-weight: $bold;
@@ -158,21 +177,29 @@
 }
 
 .campaign-card__foot--page {
-  padding-left: rem(24);
-  padding-right: rem(24);
+  @include mq("md") {
+    padding-bottom: rem(43);
+  }
 }
 
 .campaign-card__padding24 {
-  padding-right: rem(24);
-  padding-left: rem(24);
+  @include mq("md") {
+    padding-right: rem(24);
+    padding-left: rem(24);
+  }
 }
 
 .campaign-card__title--center {
   text-align: center;
   margin-top: 0;
+
 }
 
 .campaign-card__body--side {
+  padding-right: rem(24);
+  padding-left: rem(24);
+  padding-top: rem(18);
+
   @include mq("md") {
     padding-top: rem(16);
   }
@@ -185,18 +212,20 @@
 }
 
 .campaign-card__price-before--side {
-@include mq("md") {
-  font-size: rem(20);
-}
+  @include mq("md") {
+    font-size: rem(20);
+  }
 }
 
 .campaign-card__price-after--side {
-@include mq("md") {
-  font-size: rem(32);
-}
+  @include mq("md") {
+    font-size: rem(32);
+  }
 }
 
 .campaign-card__foot--side {
+  padding-right: rem(16);
+  padding-left: rem(16);
   @include mq("md") {
     padding-bottom: rem(23);
   }

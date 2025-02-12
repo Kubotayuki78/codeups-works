@@ -1,0 +1,20 @@
+@use "global" as *;
+.page-sitemap {
+  margin-top: rem(32);
+
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}
+
+.page-sitemap__inner {
+}
+
+.page-sitemap__copyright {
+  text-align: center;
+  margin-top: rem(19);
+
+  @include mq("md") {
+    margin-top: rem(57);
+  }
+}
