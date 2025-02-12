@@ -11,6 +11,10 @@
   background-color: $accent-color;
   overflow-y: scroll;
   z-index: -1;
+
+  @include mq("md") {
+    display: none !important;
+  }
 }
 
 // .sp-nav.is-checked {

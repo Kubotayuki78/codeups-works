@@ -33,6 +33,10 @@
   color: $white;
   font-size: rem(12);
   letter-spacing: rem(4.8);
+
+  @include mq("md") {
+    margin-top: rem(3);
+  }
 }
 
 .form-field__item {
@@ -57,6 +61,15 @@
   height: calc(tan(60deg) * rem(12) / 2);
   width: rem(12);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.form-field__item.form-field__item--radio {
+  margin-top: rem(4);
+}
+
+
+.form-field__item.form-field__item--select {
+  margin-top: rem(-2);
 }
 
 .form-text {
@@ -128,6 +141,11 @@
   padding: calc(rem(11) - rem(1)) calc(rem(20) - rem(1)) calc(rem(12) - rem(1))
     calc(rem(8)) - rem(1);
   font-size: rem(12);
+
+  @include mq("md") {
+    padding: calc(rem(7) - rem(1)) calc(rem(20) - rem(1)) calc(rem(6) - rem(1))
+    calc(rem(8)) - rem(1);
+  }
 }
 
 .form-field__item--textarea {
@@ -190,7 +208,9 @@
   left: rem(-30);
 
   @include mq("md") {
-    margin-top: 2px;
+    margin-top: rem(2);
+    left: rem(-35);
+    top: rem(-3);
   }
 }
 

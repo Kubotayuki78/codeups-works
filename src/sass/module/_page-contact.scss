@@ -31,6 +31,10 @@
   display: flex;
   justify-content: center;
   margin-left: rem(30);
+
+  @include mq("md") {
+    margin-top: rem(78);
+  }
 }
 
 .page-contact__button {
@@ -43,6 +47,14 @@
 }
 
 .page-contact__footer {
+  margin-top: rem(144);
+
+  @include mq("md") {
+    margin-top: rem(164);
+  }
+}
+
+.page-contact-thanks__footer {
   margin-top: rem(144);
 
   @include mq("md") {
