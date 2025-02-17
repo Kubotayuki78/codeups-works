@@ -49,7 +49,7 @@
 @media (hover: hover) {
   .info-tag:hover {
     color: $white;
-    background-color: lighten($accent-color, 20%);
+    background-color: $accent-color;
   }
 
   .info-tag:hover::before {

@@ -21,6 +21,6 @@
 
 @media (any-hover: hover) {
   .voice-tag:hover {
-    background-color: lighten($accent-color, 20%);
+    background-color: $accent-color;
   }
 }
