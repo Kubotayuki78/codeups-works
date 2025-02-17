@@ -1,44 +1,10 @@
 @use "global" as *;
+.side-popular {
+}
 
 .side-popular__items {
   margin-top: rem(24);
   display: flex;
   flex-direction: column;
   gap: rem(24);
-}
-
-.side-popular__item {
-  background-color: $white;
-  box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
-  padding: rem(16);
-  display: flex;
-  gap: rem(16);
-}
-
-.side-popular-image {
-  aspect-ratio: 121/90; // 幅 / 高さ
-  overflow: hidden;
-  width: 46%;
-}
-
-.side-popular-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.side-popular-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.side-popular-date {
-  font-size: rem(12);
-  font-family: $english-family;
-  line-height: 1.5;
-}
-
-.side-popular-text {
-  margin-top: rem(4);
-  font-weight: 500;
 }

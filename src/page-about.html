@@ -49,7 +49,7 @@
     <header class="header">
       <div class="header__inner">
         <h1 class="header__logo">
-          <a href="#"
+          <a href="index.html"
             ><img
               src="./assets/images/common/logo.png"
               alt="CodeUps"
@@ -167,9 +167,9 @@
     </header>
 
     <main>
-      <section class="page-about__fv page-fv">
+      <section class="page-fv">
         <div class="page-fv__image">
-          <picture class="">
+          <picture>
             <source
               media="(min-width: 768px)"
               srcset="./assets/images/about-page/aboutus-fv-pc.jpg"
@@ -185,150 +185,137 @@
           <h2>About us</h2>
         </div>
       </section>
-      <div class="page-wrapper">
-        <div class="page-about__inner inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb Navigation">
-            <ul>
-              <li><a href="index.html">TOP</a></li>
-              <li><a href="#">私たちについて</a></li>
+
+      <div class="page-breadcrumb layout-breadcrumb">
+        <div class="page-breadcrumb__inner inner">
+          <nav class="page-breadcrumb__list">
+            <ul class="page-breadcrumb__items">
+              <li class="page-breadcrumb__item">
+                <a href="index.html">TOP</a>
+              </li>
+              <li class="page-breadcrumb__item">
+                <a href="#">私たちについて</a>
+              </li>
             </ul>
           </nav>
+        </div>
+      </div>
 
-          <div class="page-about">
-            <div class="about__images page-about__images">
-              <div class="about__image1 about__image1--page">
-                <img
-                  src="./assets/images/common/aboutus-1.jpg"
-                  alt="海の中の黄色い魚の画像"
-                />
-              </div>
-              <div class="about__image2 about__image2--page">
-                <img
-                  src="./assets/images/common/aboutus-2.jpg"
-                  alt="瓦屋根とシーサーの画像"
-                />
-              </div>
-              <h3 class="about__images-page-title u-mobile">
-                Dive into<br />
-                the Ocean
-              </h3>
+      <section class="page-about layout-page-about">
+        <div class="page-about__inner inner">
+          <div class="page-about__images">
+            <div class="page-about__image1">
+              <img
+                src="./assets/images/common/aboutus-1.jpg"
+                alt="海の中の黄色い魚の画像"
+              />
+            </div>
+            <div class="page-about__image2">
+              <img
+                src="./assets/images/common/aboutus-2.jpg"
+                alt="瓦屋根とシーサーの画像"
+              />
+            </div>
+            <h3 class="page-about__title page-about__title--absolute u-mobile">
+              Dive into<br />
+              the Ocean
+            </h3>
+          </div>
+          <div class="page-about__content">
+            <h3 class="page-about__title u-desktop">
+              Dive into<br />
+              the Ocean
+            </h3>
+            <div class="page-about__text">
+              <p>
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="gallery layout-gallery">
+        <div class="gallery__inner inner">
+          <div class="gallery__heading heading">
+            <p class="heading__title-en">gallery</p>
+            <h2 class="heading__title-ja">フォト</h2>
+          </div>
+
+          <div class="gallery__items">
+            <div class="gallery__item gallery__item--large js-modal__trigger">
+              <img
+                src="./assets/images/about-page/gallery1.jpg"
+                alt="ギャラリー画像1"
+                width="345"
+                height="523"
+                loading="lazy"
+              />
             </div>
 
-            <div class="about__content about__content--page">
-              <h3 class="about__title u-desktop">
-                Dive into<br />
-                the Ocean
-              </h3>
-              <div class="about__body">
-                <div class="about__text about__text--page">
-                  <p>
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</spa
-                    >
-                  </p>
-                </div>
-              </div>
+            <div class="gallery__item gallery__item--small js-modal__trigger">
+              <img
+                src="./assets/images/about-page/gallery2.jpg"
+                alt="ギャラリー画像2"
+                width="345"
+                height="219"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery__item gallery__item--small js-modal__trigger">
+              <img
+                src="./assets/images/about-page/gallery3.jpg"
+                alt="ギャラリー画像3"
+                width="345"
+                height="219"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery__item gallery__item--small js-modal__trigger">
+              <img
+                src="./assets/images/about-page/gallery4.jpg"
+                alt="ギャラリー画像4"
+                width="345"
+                height="219"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery__item gallery__item--small js-modal__trigger">
+              <img
+                src="./assets/images/about-page/gallery5.jpg"
+                alt="ギャラリー画像5"
+                width="345"
+                height="219"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery__item gallery__item--large js-modal__trigger">
+              <img
+                src="./assets/images/about-page/gallery6.jpg"
+                alt="ギャラリー画像6"
+                width="345"
+                height="523"
+                loading="lazy"
+              />
             </div>
           </div>
 
-          <div class="about__gallery about-gallery">
-            <div class="about-gallery__heading heading">
-              <p class="heading__title-en">gallery</p>
-              <h2 class="heading__title-ja">フォト</h2>
-            </div>
-
-            <div class="about-gallery__items">
-              <div
-                class="about-gallery__item1 about-gallery__item--large js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery1.jpg"
-                  alt="ギャラリー画像1"
-                  width="345"
-                  height="523"
-                  loading="lazy"
-                />
-              </div>
-
-              <div
-                class="about-gallery__item2 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery2.jpg"
-                  alt="ギャラリー画像2"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item3 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery3.jpg"
-                  alt="ギャラリー画像3"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item4 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery4.jpg"
-                  alt="ギャラリー画像4"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item5 about-gallery__item--small js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery5.jpg"
-                  alt="ギャラリー画像5"
-                  width="345"
-                  height="219"
-                  loading="lazy"
-                />
-              </div>
-              <div
-                class="about-gallery__item6 about-gallery__item--large js-modal__trigger"
-              >
-                <img
-                  src="./assets/images/about-page/gallery6.jpg"
-                  alt="ギャラリー画像6"
-                  width="345"
-                  height="523"
-                  loading="lazy"
-                />
+          <div class="modal">
+            <!-- モーダル本体 -->
+            <div class="modal__wrapper">
+              <div class="modal__layer"></div>
+              <div class="modal__container">
+                <!-- モーダル内のコンテンツ -->
+                <div class="modal__content"></div>
+                <!-- / モーダル内のコンテンツ -->
               </div>
             </div>
+            <!-- / モーダル本体 -->
           </div>
         </div>
       </div>
 
-      <div class="modal">
-        <div class="modal-inner">
-          <!-- モーダル本体 -->
-          <div class="modal__wrapper">
-            <div class="modal__layer"></div>
-            <div class="modal__container">
-              <!-- モーダルを閉じるボタン -->
-              <div class="modal__close"></div>
-              <!-- / モーダルを閉じるボタン -->
-
-              <!-- モーダル内のコンテンツ -->
-              <div class="modal__content"></div>
-              <!-- / モーダル内のコンテンツ -->
-            </div>
-          </div>
-          <!-- / モーダル本体 -->
-        </div>
-      </div>
-
-      <section class="contact page-contact--about-page">
+      <section class="contact layout-page-foot-contact">
         <div class="contact__inner inner">
           <div class="contact__wrapper">
             <div class="contact__left">

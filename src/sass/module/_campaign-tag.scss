@@ -1,5 +1,5 @@
 @use "global" as *;
-.page-tag {
+.campaign-tag {
   display: inline-block;
   padding: calc(rem(6) - rem(1)) rem(10);
   text-align: center;
@@ -15,12 +15,12 @@
   }
 }
 
-.page-tag:hover {
+.campaign-tag:hover {
   background-color: $accent-color;
   color: $white;
 }
 
-.page-tag.tag-active {
+.campaign-tag.tag-active {
   background-color: $accent-color;
   color: $white;
 }

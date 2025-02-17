@@ -84,23 +84,24 @@
   }
 }
 
-/* 縦線 */
+/* 縦線（デフォルト） */
 .faq-accordion__title::before {
-  transform: rotate(90deg); /* 線を縦に */
   transition: transform 0.3s ease-in-out;
 }
 
-/* 横線 */
+/* 横線（デフォルト） */
 .faq-accordion__title::after {
+  transform: rotate(180deg); /* 開いていない時はプラスに見せる */
+  opacity: 1; /* 開いていない時は横線を消す（プラスに見える） */
   transition: opacity 0.3s ease-in-out;
 }
 
-/* 縦線(クリック後) */
+/* 縦線（クリック後） */
 .faq-accordion__title.open::before {
-  transform: rotate(180deg);
+  transform: rotate(0deg); /* 開いた時に縦線だけになる（マイナスに見せる） */
 }
 
-/* 横線(クリック後) */
+/* 横線（クリック後） */
 .faq-accordion__title.open::after {
-  opacity: 0;
+  opacity: 0; /* 開いた時に横線を表示（マイナスにする） */
 }

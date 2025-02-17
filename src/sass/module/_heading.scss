@@ -16,21 +16,21 @@
   }
 }
 
-
 .heading__title-en::first-letter {
   text-transform: uppercase;
   color: $accent-color;
 }
 
 .heading__title-en.heading__title-en--white {
-
   @include mq("md") {
     color: $white;
   }
 }
 
 .heading__title-en.heading__title-en--white::first-letter {
-  color: $white;
+  @include mq("md") {
+    color: $white;
+  }
 }
 
 .heading__title-ja {
@@ -48,7 +48,7 @@
 .heading__title-ja.heading__title-ja--white {
   @include mq("md") {
     color: $white;
-  };
+  }
 }
 
 .heading__title-en.heading__title-en--large {

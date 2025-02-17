@@ -1,107 +1,61 @@
 @use "global" as *;
-.page-blog__content {
-  margin-top: rem(52);
+.page-blog {
+  position: relative;
+}
+
+.page-blog::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(120); /*画像の幅*/
+  height: rem(55); /*画像の高さ*/
+  background-image: url("../images/common/deco-fishes-to-right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  top: rem(-24);
+  left: calc(50% - min(46%, rem(372)));
+  z-index: -1;
 
   @include mq("md") {
-    margin-top: rem(150);
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
   }
 }
 
-.page-blog__content--page {
-  margin-top: rem(44);
+.page-blog.page-blog--postpage::after {
+  top: rem(-61);
 }
 
-.page-blog__pagination {
-  width: 100vw;
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
+.page-blog__inner {
+  max-width: rem(500);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq("md") {
+    max-width: rem(1130);
+    padding-left: rem(25);
+    padding-right: rem(25);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: rem(80);
+  }
+}
+
+.page-blog__main {
+  @include mq("md") {
+    width: 70%;
+  }
+}
+
+.page-blog__side {
   margin-top: rem(80);
 
   @include mq("md") {
-    margin-top: rem(84);
+    margin-top: 0;
+    width: 29%;
   }
-}
-
-.page-blog__pagination--page {
-  margin-top: rem(40);
-
-  @include mq("md") {
-    margin-top: rem(78);
-  }
-}
-
-.wp-pagenavi.page-blog__pagination--page {
-  gap: rem(25);
-}
-
-.page-blog__date {
-  font-family: Gotu;
-  font-size: rem(14);
-  line-height: 1.285;
-}
-
-.page-blog__heading {
-  margin-top: rem(8);
-  padding-bottom: rem(4);
-  font-size: rem(24);
-  font-weight: 500;
-  border-bottom: 1px solid $accent-color;
-
-  @include mq("md") {
-    font-size: rem(32);
-    padding-bottom: rem(0);
-  }
-}
-
-.page-blog__image {
-  margin-top: rem(24);
-
-  @include mq("md") {
-    margin-top: rem(40);
-    width: 99%;
-  }
-}
-
-.page-blog__image img {
-  width: 100%;
-  height: auto;
-}
-
-.page-blog__text {
-  margin-top: rem(24);
-
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
-
-// list
-.page-blog__lists {
-  margin-top: rem(24);
-
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
-
-.page-blog__list {
-  display: flex;
-  flex-direction: column;
-  gap: rem(4);
-}
-
-.page-blog__list-item {
-  display: flex;
-  align-items: center;
-  gap: rem(10);
-}
-
-.page-blog__list-item::before {
-  content: "";
-  width: rem(18); /* SVGのサイズ調整 */
-  height: rem(18);
-  background: url("../images/common/icon-blue.png");
-  background-repeat: no-repeat;
-  background-position: top rem(1) center;
-  background-size: contain;
 }

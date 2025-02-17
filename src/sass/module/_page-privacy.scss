@@ -1,9 +1,27 @@
 @use "global" as *;
 .page-privacy {
-  margin-top: rem(52);
+  position: relative;
+}
+
+.page-privacy::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(120); /*画像の幅*/
+  height: rem(55); /*画像の高さ*/
+  background-image: url("../images/common/deco-fishes-to-right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  top: rem(-24);
+  left: calc(50% - min(46%, rem(372)));
+  z-index: -1;
 
   @include mq("md") {
-    margin-top: rem(150);
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
   }
 }
 

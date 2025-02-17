@@ -1,8 +1,12 @@
 @use "global" as *;
+
 .page-campaign-cards {
+  margin-top: rem(40);
 }
 
-.page-campaign-cards__card {
+.page-campaign-cards__inner {
+  margin-right: rem(32);
+  margin-left: rem(32);
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: rem(30);
@@ -11,6 +15,8 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: rem(70);
     column-gap: rem(40);
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 

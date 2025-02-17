@@ -3,8 +3,12 @@
 .page-voice {
 }
 
-.voice__cards.page-voice__cards {
-  margin-top: rem(39);
+.page-voice__inner {
+  max-width: rem(500);
+}
+
+.page-voice__cards {
+  margin-top: rem(40);
 }
 
 .page-voice__pagination {
@@ -14,3 +18,15 @@
     margin-top: rem(74);
   }
 }
+
+// .voice__cards.page-voice__cards {
+//   margin-top: rem(39);
+// }
+
+// .page-voice__pagination {
+//   margin-top: rem(80);
+
+//   @include mq("md") {
+//     margin-top: rem(74);
+//   }
+// }

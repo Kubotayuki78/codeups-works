@@ -1,9 +1,9 @@
 @use "global" as *;
-.page-wrapper {
+.page-layout {
   position: relative;
 }
 
-.page-wrapper::after {
+.page-layout::after {
   content: ""; /*何も入れない*/
   position: absolute;
   display: inline-block;
@@ -13,7 +13,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   vertical-align: middle;
-  top: rem(56);
+  top: rem(0);
   left: calc(50% - min(46%, rem(372)));
 
   @include mq("md") {
@@ -24,7 +24,7 @@
   }
 }
 
-.page-wrapper--blog {
+.page-layout--blog {
   margin-left: auto;
   margin-right: auto;
 }

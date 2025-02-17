@@ -1,0 +1,22 @@
+@use "global" as *;
+.blog-side {
+}
+
+.blog-side__inner {
+  padding-right: rem(25);
+  padding-left: rem(25);
+
+  @include mq("md") {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.blog-side__item:not(:first-child) {
+  margin-top: rem(81);
+}
+
+.blog-side__item--postpage {
+  margin-top: rem(8);
+}
+

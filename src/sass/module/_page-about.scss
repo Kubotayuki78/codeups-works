@@ -1,8 +1,123 @@
-@use 'global' as *;
-.about__images.page-about__images {
-  margin-top: rem(26);
+@use "global" as *;
+
+.page-about {
+  position: relative;
+}
+
+.page-about::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(120); /*画像の幅*/
+  height: rem(55); /*画像の高さ*/
+  background-image: url("../images/common/deco-fishes-to-right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  top: rem(-24);
+  left: calc(50% - min(46%, rem(372)));
+  z-index: -1;
 
   @include mq("md") {
-    margin-top: rem(150);
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
+  }
+}
+
+.page-about__inner {
+  position: relative;
+}
+
+.page-about__images {
+  position: relative;
+  aspect-ratio: 345/212; // 幅 / 高さ
+
+  @include mq("md") {
+    overflow: hidden;
+  }
+}
+
+.page-about__image1 {
+  aspect-ratio: 345/228; // 幅 / 高さ
+
+  @include mq("md") {
+    aspect-ratio: 880/581;
+  }
+}
+
+.page-about__image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  @include mq("md") {
+    width: 82%;
+    position: absolute;
+    top: rem(40);
+    right: 0;
+  }
+}
+
+.page-about__image2 img {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 37%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.page-about__title {
+  top: rem(24);
+  left: rem(24);
+  color: #fff;
+  font-family: $english-family;
+  font-size: rem(40);
+  font-weight: 400;
+  line-height: 1;
+
+  @include mq("md") {
+    line-height: 1.25;
+    font-size: rem(80);
+    top: 0;
+    left: 0;
+  }
+}
+
+.page-about__title--absolute {
+  position: absolute;
+}
+
+.page-about__content {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    margin-top: 0;
+    position: absolute;
+    top: rem(200);
+    left: 57.6%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    max-width: rem(840);
+  }
+}
+
+.page-about__text {
+  line-height: 1.5;
+  @include mq("md") {
+    width: rem(400);
+    color: $white;
   }
 }

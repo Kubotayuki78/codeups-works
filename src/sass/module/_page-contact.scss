@@ -1,29 +1,36 @@
 @use "global" as *;
-.page-contact__title {
+.page-contact {
+  position: relative;
 }
 
-.page-contact__form {
-  margin-top: rem(50);
+.page-contact::after {
+  content: ""; /*何も入れない*/
+  position: absolute;
+  display: inline-block;
+  width: rem(120); /*画像の幅*/
+  height: rem(55); /*画像の高さ*/
+  background-image: url("../images/common/deco-fishes-to-right.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  top: rem(-24);
+  left: calc(50% - min(46%, rem(372)));
+  z-index: -1;
 
   @include mq("md") {
-    margin-top: rem(150);
+    width: rem(301);
+    height: rem(138);
+    top: rem(-70);
+    left: calc(50% - min(48%, rem(620)));
+  }
+}
+
+.page-contact__inner {
+  @include mq("md") {
     max-width: rem(700);
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-.page-contact__fields {
-  display: flex;
-  flex-direction: column;
-  gap: rem(22);
-
-  @include mq("md") {
-    gap: rem(39);
-  }
-}
-
-.page-contact__field {
 }
 
 .page-contact__privacy {
@@ -46,18 +53,3 @@
   }
 }
 
-.page-contact__footer {
-  margin-top: rem(144);
-
-  @include mq("md") {
-    margin-top: rem(164);
-  }
-}
-
-.page-contact-thanks__footer {
-  margin-top: rem(144);
-
-  @include mq("md") {
-    margin-top: rem(120);
-  }
-}

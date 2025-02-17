@@ -93,3 +93,11 @@
     display: inline-flex;
   }
 }
+
+.wp-pagenavi.blog-main__pagination--postpage {
+  gap: rem(25);
+
+  @include mq("md") {
+    gap: rem(40);
+  }
+}

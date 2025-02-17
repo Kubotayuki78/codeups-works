@@ -143,53 +143,91 @@ jQuery(function ($) {
   });
 
   //モーダルウィンドウ
-  // 変数に要素を入れる
-  var trigger = $(".js-modal__trigger"),
-    wrapper = $(".modal__wrapper"),
-    layer = $(".modal__layer"),
-    container = $(".modal__container"),
-    close = $(".modal__close"),
-    content = $(".modal__content");
+  $(document).ready(function () {
+    // 変数に要素を格納
+    var trigger = $(".js-modal__trigger"),
+      wrapper = $(".modal__wrapper"),
+      layer = $(".modal__layer"),
+      container = $(".modal__container"),
+      content = $(".modal__content");
 
-  // 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
-  $(trigger).click(function () {
-    $(wrapper).fadeIn(400);
+    // 『ギャラリーの画像』をクリックしたら、モーダルを開く
+    $(trigger).click(function () {
+      let imgSrc = $(this).find("img").attr("src"); // クリックした画像の src を取得
+      let imgAlt = $(this).find("img").attr("alt"); // alt テキストを取得（アクセシビリティ向上）
 
-    // クリックした画像のHTML要素を取得して、置き換える
-    $(content).html($(this).prop("outerHTML"));
+      // モーダルに挿入する画像のHTMLを作成
+      let modalImage = `<img src="${imgSrc}" alt="${imgAlt}" class="modal__image">`;
 
-    // スクロール位置を戻す
-    $(container).scrollTop(0);
+      // モーダル内に画像を挿入
+      $(content).html(modalImage);
 
-    // サイトのスクロールを禁止にする
-    $("html, body").css("overflow", "hidden");
-  });
+      $(wrapper).fadeIn(400); // モーダルを表示
 
-  // 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
-  $(layer)
-    .add(close)
-    .click(function () {
-      $(wrapper).fadeOut(400);
+      // スクロール位置を戻す
+      $(container).scrollTop(0);
 
-      // サイトのスクロール禁止を解除する
-      $("html, body").removeAttr("style");
+      // サイトのスクロールを禁止にする
+      $("html, body").css("overflow", "hidden");
     });
+
+    // 『背景部分（モーダルのレイヤー）』をクリックしたら、モーダルを閉じる
+    $(layer).click(function () {
+      $(wrapper).fadeOut(400); // モーダルを非表示
+
+      // サイトのスクロール禁止を解除
+      $("html, body").css("overflow", "");
+    });
+  });
 
   //アコーディオン
   $(function () {
-    // 最初のコンテンツは表示
-    $(".accordion-item:first-of-type .accordion-content").css(
-      "display",
-      "block"
-    );
-    // 最初の矢印は開いた時の状態に
-    $(".accordion-item:first-of-type .js-accordion-title").addClass("open");
-    // タイトルをクリックすると
+    // すべてのアコーディオンのコンテンツを開いた状態にする
+    $(".faq-accordion__content").css("display", "block");
+
+    // すべてのアコーディオンのタイトルに `open` クラスを付与
+    $(".js-accordion-title").addClass("open");
+
+    // タイトルをクリックすると開閉する
     $(".js-accordion-title").on("click", function () {
-      // クリックした次の要素を開閉
-      $(this).next().slideToggle(300);
-      // タイトルにopenクラスを付け外しして矢印の向きを変更
-      $(this).toggleClass("open", 300);
+      // クリックしたタイトルの直後の要素（コンテンツ）を開閉
+      $(this).next(".faq-accordion__content").slideToggle(300);
+
+      // タイトルに `open` クラスを付け外しして矢印の向きを変更
+      $(this).toggleClass("open");
+    });
+  });
+
+  //Informationタブの切替
+  $(document).ready(function () {
+    $(".info-tags__tag").on("click", function (event) {
+      event.preventDefault();
+
+      var selectedTab = $(this).attr("data-tab");
+
+      // タグのアクティブクラスをリセット
+      $(".info-tags__tag").removeClass("tag-active");
+      $(this).addClass("tag-active");
+
+      // カードの表示切り替え
+      $(".page-info__cards").each(function () {
+        if ($(this).attr("data-content") === selectedTab) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    });
+
+    // 初期状態の設定
+    var firstTab = $(".js-info-tag").first();
+    firstTab.addClass("tag-active");
+    var firstTabContent = firstTab.attr("data-tab");
+
+    $(".page-info__cards").each(function () {
+      if ($(this).attr("data-content") !== firstTabContent) {
+        $(this).hide();
+      }
     });
   });
 });

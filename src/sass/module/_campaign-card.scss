@@ -23,7 +23,6 @@
     aspect-ratio: 335/223;
   }
 }
-
 .campaign-card__image--side {
   aspect-ratio: 294/185; // 幅 / 高さ
 
@@ -32,10 +31,18 @@
   }
 }
 
+@media (hover: hover) {
+  .campaign-card:hover .campaign-card__image--side img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
 .campaign-card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
 }
 
 .campaign-card__body {
@@ -68,6 +75,14 @@
   font-size: rem(16);
   padding-bottom: rem(7);
   border-bottom: 1px solid $accent-color;
+}
+
+.campaign-card__title.campaign-card__title--large {
+  @include mq("md") {
+    font-size: rem(24);
+    margin-top: rem(9);
+    padding-bottom: rem(9);
+  }
 }
 
 .campaign-card__foot {
@@ -192,7 +207,6 @@
 .campaign-card__title--center {
   text-align: center;
   margin-top: 0;
-
 }
 
 .campaign-card__body--side {
@@ -226,7 +240,8 @@
 .campaign-card__foot--side {
   padding-right: rem(16);
   padding-left: rem(16);
+
   @include mq("md") {
-    padding-bottom: rem(23);
+    padding-bottom: rem(21);
   }
 }

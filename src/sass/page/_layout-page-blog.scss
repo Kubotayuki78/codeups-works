@@ -1,0 +1,16 @@
+@use "global" as *;
+.layout-page-blog {
+  margin-top: rem(52);
+
+  @include mq("md") {
+    margin-top: rem(150);
+  }
+}
+
+.layout-page-blog--postpage {
+  margin-top: rem(45);
+
+  @include mq("md") {
+    margin-top: rem(140);
+  }
+}

@@ -1,7 +1,6 @@
-@use 'global' as *;
+@use "global" as *;
 
-.page-tags {
-  margin-top: rem(52);
+.campaign-tags {
   display: grid;
   gap: rem(16) rem(21);
   grid-template-columns: repeat(2, 1fr);
@@ -13,6 +12,5 @@
     max-width: 100%;
     display: flex;
     gap: rem(32);
-    margin-top: rem(150);
   }
 }

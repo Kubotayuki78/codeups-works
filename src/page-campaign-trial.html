@@ -71,7 +71,7 @@
               <a href="page-about.html">About us<span>私たちについて</span></a>
             </li>
             <li class="pc-nav__item">
-              <a href="page-information.html"
+              <a href="page-info.html"
                 >Information<span>ダイビング情報</span></a
               >
             </li>
@@ -103,9 +103,11 @@
                 <a href="page-campaign.html">キャンペーン</a>
               </p>
               <ul class="sp-nav__body">
-                <li><a href="page-campaign.html">ライセンス取得</a></li>
-                <li><a href="page-campaign.html">貸切体験ダイビング</a></li>
-                <li><a href="page-campaign.html">ナイトダイビング</a></li>
+                <li><a href="page-campaign-license.html">ライセンス取得</a></li>
+                <li>
+                  <a href="page-campaign-trial.html">貸切体験ダイビング</a>
+                </li>
+                <li><a href="page-campaign-trial.html">ナイトダイビング</a></li>
               </ul>
             </div>
             <div>
@@ -115,12 +117,12 @@
             </div>
             <div>
               <p class="sp-nav__heading">
-                <a href="page-information.html">ダイビング情報</a>
+                <a href="page-info.html">ダイビング情報</a>
               </p>
               <ul class="sp-nav__body">
-                <li><a href="page-information.html">ライセンス講習</a></li>
-                <li><a href="page-information.html">体験ダイビング</a></li>
-                <li><a href="page-information.html">ファンダイビング</a></li>
+                <li><a href="page-info.html">ライセンス講習</a></li>
+                <li><a href="page-info.html">体験ダイビング</a></li>
+                <li><a href="page-info.html">ファンダイビング</a></li>
               </ul>
             </div>
             <div>
@@ -136,9 +138,9 @@
                 <a href="page-price.html">料金一覧</a>
               </p>
               <ul class="sp-nav__body">
-                <li><a href="page-information.html">ライセンス講習</a></li>
-                <li><a href="page-information.html">体験ダイビング</a></li>
-                <li><a href="page-information.html">ファンダイビング</a></li>
+                <li><a href="page-info.html">ライセンス講習</a></li>
+                <li><a href="page-info.html">体験ダイビング</a></li>
+                <li><a href="page-info.html">ファンダイビング</a></li>
               </ul>
             </div>
             <div>
@@ -167,65 +169,207 @@
     </header>
 
     <main>
-      <section class="page-information__fv page-fv">
+      <section class="page-fv">
         <div class="page-fv__image">
-          <picture class="">
+          <picture>
             <source
               media="(min-width: 768px)"
-              srcset="./assets/images/information-page/information-fv-pc.jpg"
+              srcset="./assets/images/campaign-page/campaign-fv-pc.jpg"
             />
             <img
-              src="./assets/images/information-page/information-fv-sp.jpg"
+              src="./assets/images/campaign-page/campaign-fv-sp.jpg"
               alt=""
               decoding="async"
             />
           </picture>
         </div>
         <div class="page-fv__heading">
-          <h2>Information</h2>
+          <h2>Campaign</h2>
         </div>
       </section>
-      <div class="page-wrapper">
-        <div class="page-information__inner inner">
-          <nav class="breadcrumb">
-            <ul>
-              <li><a href="index.html">TOP</a></li>
-              <li><a href="page-infotmation.html">ダイビング情報</a></li>
+      <div class="page-breadcrumb layout-breadcrumb">
+        <div class="page-breadcrumb__inner inner">
+          <nav class="page-breadcrumb__list">
+            <ul class="page-breadcrumb__items">
+              <li class="page-breadcrumb__item">
+                <a href="index.html">TOP</a>
+              </li>
+              <li class="page-breadcrumb__item">
+                <a href="#">キャンペーン</a>
+              </li>
             </ul>
           </nav>
+        </div>
+      </div>
 
-          <div class="page-info__tags">
-            <a href="page-infotmation.html" class="page-info__tag tag-active">
-              ライセンス<br class="u-mobile" />講習
-            </a>
-            <a href="#" class="page-info__tag"
-              >ファン<br class="u-mobile" />ダイビング
-            </a>
-            <a href="#" class="page-info__tag"
-              >体験<br class="u-mobile" />ダイビング
-            </a>
+      <div class="page-campaign layout-page-campaign">
+        <div class="page-campaign__inner inner">
+          <div class="page-campaign__tags campaign-tags">
+            <a href="page-campaign.html" class="campaign-tags__tag campaign-tag"
+              >ALL</a
+            >
+            <a
+              href="page-campaign-license.html"
+              class="campaign-tags__tag campaign-tag"
+              >ライセンス講習</a
+            >
+            <a
+              href="page-campaign-fundiving.html"
+              class="campaign-tags__tag campaign-tag"
+            >
+              ファンダイビング</a
+            >
+            <a
+              href="page-campaign-trial.html"
+              class="campaign-tags__tag campaign-tag tag-active"
+              >体験ダイビング</a
+            >
           </div>
 
-          <div class="page-info__cards page-info-cards">
-            <div class="page-info-cards__card page-info-card">
-              <div class="page-info-card__content">
-                <h3 class="page-info-card__title">ライセンス講習</h3>
-                <p class="page-info-card__text">
-                  泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
-                </p>
+          <div class="page-campaign__cards page-campaign-cards">
+            <div class="page-campaign-cards__inner">
+              <div class="page-campaign-cards__card campaign-card">
+                <figure class="campaign-card__image campaign-card__image--page">
+                  <img
+                    src="./assets/images/common/campaign2.jpg"
+                    alt="サンゴ礁の魚たちの画像"
+                    width="400"
+                    height="396"
+                  />
+                </figure>
+                <div class="campaign-card__body campaign-card__padding24">
+                  <span class="campaign-card__tag">体験ダイビング</span>
+                  <h3 class="campaign-card__title campaign-card__title--large">
+                    貸切体験ダイビング
+                  </h3>
+                </div>
+                <div
+                  class="campaign-card__foot campaign-card__foot--page campaign-card__padding24"
+                >
+                  <p class="campaign-card__text campaign-card__text--page">
+                    全部コミコミ(お一人様)
+                  </p>
+                  <div class="campaign-card__price campaign-card__price--page">
+                    <p class="campaign-card__price-before">¥24,000</p>
+                    <p class="campaign-card__price-after">¥18,000</p>
+                  </div>
+                  <div class="campaign-card__page-block u-desktop">
+                    <p class="campaign-card__page-description">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                    </p>
+                    <p class="campaign-card__page-span">2023/6/1-9/30</p>
+                    <p class="campaign-card__page-text">
+                      ご予約・お問い合わせはコチラ
+                    </p>
+                    <div class="campaign-card__button">
+                      <a href="page-contact.html" class="btn"
+                        ><span>Contact us</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="page-info-card__image">
-                <img
-                  src="./assets/images/information-page/information-1.jpg"
-                  alt=""
-                />
+              <div class="page-campaign-cards__card campaign-card">
+                <figure class="campaign-card__image campaign-card__image--page">
+                  <img
+                    src="./assets/images/common/campaign3.jpg"
+                    alt="サンゴ礁の魚たちの画像"
+                    width="400"
+                    height="396"
+                  />
+                </figure>
+                <div class="campaign-card__body campaign-card__padding24">
+                  <span class="campaign-card__tag">体験ダイビング</span>
+                  <h3 class="campaign-card__title campaign-card__title--large">
+                    ナイトダイビング
+                  </h3>
+                </div>
+                <div
+                  class="campaign-card__foot campaign-card__foot--page campaign-card__padding24"
+                >
+                  <p class="campaign-card__text campaign-card__text--page">
+                    全部コミコミ(お一人様)
+                  </p>
+                  <div class="campaign-card__price campaign-card__price--page">
+                    <p class="campaign-card__price-before">¥10,000</p>
+                    <p class="campaign-card__price-after">¥8,000</p>
+                  </div>
+                  <div class="campaign-card__page-block u-desktop">
+                    <p class="campaign-card__page-description">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                    </p>
+                    <p class="campaign-card__page-span">2023/6/1-9/30</p>
+                    <p class="campaign-card__page-text">
+                      ご予約・お問い合わせはコチラ
+                    </p>
+                    <div class="campaign-card__button">
+                      <a href="page-contact.html" class="btn"
+                        ><span>Contact us</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div class="page-campaign__pagination wp-pagenavi">
+            <a class="first" aria-label="First Page" href="#"></a>
+            <a
+              class="previouspostslink"
+              rel="prev"
+              aria-label="前のページ"
+              href="#"
+              ><svg
+                width="10"
+                height="18"
+                viewBox="0 0 10 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 1L1 9L9 17"
+                  stroke="#408F95"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <span aria-current="page" class="current">1</span>
+            <a class="page smaller" title="ページ 2" href="#">2</a>
+            <a class="page smaller" title="ページ 3" href="#">3</a>
+            <a class="page smaller" title="ページ 4" href="#">4</a>
+            <a class="page smaller u-desktop" title="ページ 5" href="#">5</a>
+            <a class="page smaller u-desktop" title="ページ 6" href="#">6</a>
+            <a
+              class="nextpostslink"
+              rel="next"
+              aria-label="次のページ"
+              href="#"
+            >
+              <svg
+                width="10"
+                height="18"
+                viewBox="0 0 10 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L9 9L1 17"
+                  stroke="#408F95"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a class="next" aria-label="Next Page" href="#"></a>
           </div>
         </div>
       </div>
 
-      <section class="contact page-contact--foot">
+      <section class="contact layout-page-foot-contact">
         <div class="contact__inner inner">
           <div class="contact__wrapper">
             <div class="contact__left">
@@ -263,7 +407,9 @@
               </div>
               <p class="contact__text">ご予約・お問い合わせはコチラ</p>
               <div class="contact__button">
-                <a href="" class="btn"><span>Contact us</span></a>
+                <a href="page-contact.html" class="btn"
+                  ><span>Contact us</span></a
+                >
               </div>
             </div>
           </div>
@@ -289,7 +435,7 @@
           </div>
           <div class="footer__sns">
             <a
-              href="https://facebook.com/"
+              href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               ><img
@@ -299,7 +445,7 @@
                 width="19"
             /></a>
             <a
-              href="https://instagram.com/"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               ><img
@@ -317,9 +463,11 @@
                 <a href="page-campaign.html">キャンペーン</a>
               </p>
               <ul class="footer-nav__body">
-                <li><a href="page-campaign.html">ライセンス取得</a></li>
-                <li><a href="page-campaign.html">貸切体験ダイビング</a></li>
-                <li><a href="page-campaign.html">ナイトダイビング</a></li>
+                <li><a href="page-campaign-license.html">ライセンス取得</a></li>
+                <li>
+                  <a href="page-campaign-trial.html">貸切体験ダイビング</a>
+                </li>
+                <li><a href="page-campaign-trial.html">ナイトダイビング</a></li>
               </ul>
               <div>
                 <p class="footer-nav__heading">
@@ -329,12 +477,12 @@
             </div>
             <div class="footer-nav__item footer-nav__item--2">
               <p class="footer-nav__heading">
-                <a href="page-information.html">ダイビング情報</a>
+                <a href="page-info.html">ダイビング情報</a>
               </p>
               <ul class="footer-nav__body">
-                <li><a href="page-information.html">ライセンス講習</a></li>
-                <li><a href="page-information.html">体験ダイビング</a></li>
-                <li><a href="page-information.html">ファンダイビング</a></li>
+                <li><a href="page-info.html">ライセンス講習</a></li>
+                <li><a href="page-info.html">体験ダイビング</a></li>
+                <li><a href="page-info.html">ファンダイビング</a></li>
               </ul>
               <p class="footer-nav__heading">
                 <a href="page-blog.html">ブログ</a>
@@ -348,9 +496,9 @@
                 <a href="page-price.html">料金一覧</a>
               </p>
               <ul class="footer-nav__body">
-                <li><a href="page-information.html">ライセンス講習</a></li>
-                <li><a href="page-information.html">体験ダイビング</a></li>
-                <li><a href="page-information.html">ファンダイビング</a></li>
+                <li><a href="page-info.html">ライセンス講習</a></li>
+                <li><a href="page-info.html">体験ダイビング</a></li>
+                <li><a href="page-info.html">ファンダイビング</a></li>
               </ul>
             </div>
             <div class="footer-nav__item footer-nav__item--4">

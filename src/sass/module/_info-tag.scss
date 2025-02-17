@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.info-tag {
+  color: $accent-color;
+  background-color: #ddf0f1;
+  // flex: 1;
+  font-size: rem(14);
+  box-shadow: rem(2) rem(2) rem(4) 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 100%;
+  padding: rem(9) rem(10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(8);
+  transition: all 0.3s ease;
+
+  @include mq("md") {
+    font-size: rem(24);
+    padding: rem(12) rem(10);
+  }
+}
+
+.info-tag::before {
+  @include mq("md") {
+    content: ""; /*何も入れない*/
+    display: inline-block;
+    width: rem(64); /*画像の幅*/
+    height: rem(64); /*画像の高さ*/
+    background-image: url("../images/common/whale.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.3s ease;
+  }
+}
+
+.info-tag.info-tag--type2::before {
+  @include mq("md") {
+    background-image: url("../images/common/whale-to-left.png");
+  }
+}
+
+.info-tag.info-tag--type3::before {
+  @include mq("md") {
+    background-image: url("../images/common/fish-deco.png");
+  }
+}
+
+@media (hover: hover) {
+  .info-tag:hover {
+    color: $white;
+    background-color: lighten($accent-color, 20%);
+  }
+
+  .info-tag:hover::before {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%)
+      hue-rotate(124deg) brightness(107%) contrast(100%);
+  }
+}
+
+.info-tag.tag-active {
+  color: $white;
+  background-color: $accent-color;
+}
+
+.info-tag.tag-active::before {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%)
+    hue-rotate(124deg) brightness(107%) contrast(100%);
+}

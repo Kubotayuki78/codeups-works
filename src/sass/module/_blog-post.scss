@@ -1,0 +1,72 @@
+@use 'global' as *;
+.blog-post__date {
+  font-family: Gotu;
+  font-size: rem(14);
+  line-height: 1.285;
+}
+
+.blog-post__heading {
+  margin-top: rem(8);
+  padding-bottom: rem(4);
+  font-size: rem(24);
+  font-weight: 500;
+  border-bottom: 1px solid $accent-color;
+
+  @include mq("md") {
+    font-size: rem(32);
+    padding-bottom: rem(0);
+  }
+}
+
+.blog-post__image {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(40);
+    width: 99%;
+  }
+}
+
+.blog-post__image img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-post__text {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+// list
+.blog-post__lists {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.blog-post__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+}
+
+.blog-post__list-item {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+}
+
+.blog-post__list-item::before {
+  content: "";
+  width: rem(18); /* SVGのサイズ調整 */
+  height: rem(18);
+  background: url("../images/common/icon-blue.png");
+  background-repeat: no-repeat;
+  background-position: top rem(1) center;
+  background-size: contain;
+}
