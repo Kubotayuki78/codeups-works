@@ -94,7 +94,7 @@
   }
 }
 
-.wp-pagenavi.blog-main__pagination--postpage {
+.wp-pagenavi.blog-main__pagination--single {
   gap: rem(25);
 
   @include mq("md") {

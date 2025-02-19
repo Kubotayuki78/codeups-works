@@ -16,8 +16,10 @@
 .side-archive__year {
   font-size: rem(24);
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   padding-left: rem(32);
+  cursor: pointer;
 }
 
 .side-archive__year::before {
@@ -29,10 +31,18 @@
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   top: rem(11);
   left: 0;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+
+.side-archive__year.open::before {
+  transform: rotate(0deg);
 }
 
 .side-archive__list {
   margin-left: rem(31);
+  display: none;
 }
 
 .side-archive__month {

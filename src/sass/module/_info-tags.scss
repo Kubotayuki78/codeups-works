@@ -1,4 +1,4 @@
-@use 'global' as *;
+@use "global" as *;
 .info-tags {
   display: grid;
   gap: rem(20);
@@ -8,7 +8,7 @@
   max-width: rem(500);
 
   @include mq("md") {
-    gap: rem(90);
+    gap: clamp(20px, 5vw, 90px); // 5vw を基準にしつつ、20px〜90pxの範囲で可変
     margin-top: rem(150);
     grid-template-columns: repeat(3, 1fr);
     max-width: 100%;

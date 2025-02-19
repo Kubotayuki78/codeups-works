@@ -10,15 +10,10 @@
 }
 
 .blog-cards--2col {
-  @include mq("md") {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.blog-cards--gap40 {
   gap: rem(40);
 
   @include mq("md") {
+    grid-template-columns: repeat(2, 1fr);
     column-gap: rem(42);
     row-gap: rem(80);
   }

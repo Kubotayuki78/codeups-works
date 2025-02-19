@@ -182,12 +182,6 @@ jQuery(function ($) {
 
   //アコーディオン
   $(function () {
-    // すべてのアコーディオンのコンテンツを開いた状態にする
-    $(".faq-accordion__content").css("display", "block");
-
-    // すべてのアコーディオンのタイトルに `open` クラスを付与
-    $(".js-accordion-title").addClass("open");
-
     // タイトルをクリックすると開閉する
     $(".js-accordion-title").on("click", function () {
       // クリックしたタイトルの直後の要素（コンテンツ）を開閉
@@ -200,34 +194,72 @@ jQuery(function ($) {
 
   //Informationタブの切替
   $(document).ready(function () {
-    $(".info-tags__tag").on("click", function (event) {
-      event.preventDefault();
-
-      var selectedTab = $(this).attr("data-tab");
-
+    // タブ切り替え処理
+    function switchTab(selectedTab) {
       // タグのアクティブクラスをリセット
       $(".info-tags__tag").removeClass("tag-active");
-      $(this).addClass("tag-active");
+      $(".info-tags__tag[data-tab='" + selectedTab + "']").addClass(
+        "tag-active"
+      );
 
       // カードの表示切り替え
-      $(".page-info__cards").each(function () {
-        if ($(this).attr("data-content") === selectedTab) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
+      $(".page-info__cards").hide();
+      $(".page-info__cards[data-content='" + selectedTab + "']").fadeIn(300);
+    }
+
+    // タブのクリックイベント
+    $(".info-tags__tag").on("click", function (event) {
+      event.preventDefault();
+      const selectedTab = $(this).attr("data-tab");
+
+      switchTab(selectedTab);
+
+      // ローカルストレージにアクティブタブを保存
+      localStorage.setItem("activeTab", selectedTab);
     });
 
     // 初期状態の設定
-    var firstTab = $(".js-info-tag").first();
-    firstTab.addClass("tag-active");
-    var firstTabContent = firstTab.attr("data-tab");
+    function initTab() {
+      let activeTab =
+        localStorage.getItem("activeTab") || getParameterByName("tab");
 
-    $(".page-info__cards").each(function () {
-      if ($(this).attr("data-content") !== firstTabContent) {
-        $(this).hide();
+      if (!activeTab) {
+        activeTab = $(".info-tags__tag").first().attr("data-tab"); // 最初のタブを選択
       }
+
+      switchTab(activeTab);
+
+      // 一度切り替えたら、ローカルストレージを削除して次回以降の影響を防ぐ
+      localStorage.removeItem("activeTab");
+    }
+
+    // URL パラメータを取得する関数
+    function getParameterByName(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    // 初期タブの適用
+    initTab();
+
+    // フッターのリンクのクリックイベント（タブを指定して遷移）
+    $(".footer a[data-tab]").on("click", function (event) {
+      event.preventDefault();
+      const selectedTab = $(this).attr("data-tab");
+
+      // ローカルストレージにタブ情報を保存
+      localStorage.setItem("activeTab", selectedTab);
+
+      // ページ遷移
+      window.location.href = "page-info.html";
+    });
+  });
+
+  //アーカイブの年をクリックしたら表示切り替え
+  $(document).ready(function () {
+    $(".side-archive__year").click(function () {
+      $(this).toggleClass("open"); // 三角の向きを変更
+      $(this).next(".side-archive__list").slideToggle(); // リストの表示・非表示
     });
   });
 });

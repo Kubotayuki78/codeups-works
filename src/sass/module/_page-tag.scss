@@ -1,5 +1,5 @@
 @use "global" as *;
-.voice-tag {
+.page-tag {
   display: inline-flex;
   color: $accent-color;
   background-color: $white;
@@ -14,13 +14,14 @@
   transition: background-color 0.3s;
 }
 
-.voice-tag.tag-active {
+.page-tag.tag-active {
   background-color: $accent-color;
   color: $white;
 }
 
 @media (any-hover: hover) {
-  .voice-tag:hover {
+  .page-tag:hover {
     background-color: $accent-color;
+    color: $white;
   }
 }

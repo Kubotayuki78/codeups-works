@@ -1,18 +1,5 @@
 @use "global" as *;
 .faq-accordion {
-}
-
-.faq-accordion__container {
-  display: flex;
-  flex-direction: column;
-  gap: rem(38);
-
-  @include mq("md") {
-    gap: rem(40);
-  }
-}
-
-.faq-accordion__item {
   @include mq("md") {
     display: flex;
     flex-direction: column;
@@ -34,7 +21,6 @@
 }
 
 .faq-accordion__content {
-  display: none;
   padding: rem(24) rem(16);
 
   @include mq("md") {
@@ -47,12 +33,12 @@
 }
 
 /* タイトルの背景色 */
-.faq-accordion__item .faq-accordion__title {
+.faq-accordion .faq-accordion__title {
   background-color: $accent-color;
 }
 
 /* コンテンツボックスの枠線 */
-.faq-accordion__item .faq-accordion__content {
+.faq-accordion .faq-accordion__content {
   border-bottom: rem(1) solid $accent-color;
   border-left: rem(1) solid $accent-color;
   border-right: rem(1) solid $accent-color;

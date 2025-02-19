@@ -1,10 +1,6 @@
 @use "global" as *;
 
 .page-campaign-cards {
-  margin-top: rem(40);
-}
-
-.page-campaign-cards__inner {
   margin-right: rem(32);
   margin-left: rem(32);
   display: grid;

@@ -1,4 +1,4 @@
-@use 'global' as *;
+@use "global" as *;
 .page-price {
   position: relative;
 }
@@ -22,5 +22,13 @@
     height: rem(138);
     top: rem(-70);
     left: calc(50% - min(48%, rem(620)));
+  }
+}
+
+.page-price__inner {
+  max-width: rem(600);
+
+  @include mq("md") {
+    max-width: rem(702);
   }
 }

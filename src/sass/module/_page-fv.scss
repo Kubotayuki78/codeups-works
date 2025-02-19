@@ -31,7 +31,20 @@
   }
 }
 
-.page-fv__heading h2 {
+.page-fv__heading h1 {
+  color: #fff;
+  font-family: Lato;
+  font-size: rem(40);
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  @include mq("md") {
+    font-size: rem(80);
+  }
+}
+
+.page-fv__heading p {
   color: #fff;
   font-family: Lato;
   font-size: rem(40);

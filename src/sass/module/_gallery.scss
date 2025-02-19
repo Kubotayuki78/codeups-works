@@ -40,47 +40,33 @@
   }
 }
 
-.gallery__item--small {
-  aspect-ratio: 345/219; // 幅 / 高さ
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-
-  @include mq("md") {
-    grid-column: span 6;
-    grid-row: span 1;
-    aspect-ratio: 345/218; // 幅 / 高さ
-  }
-}
-
-.gallery__item--small img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gallery__item--large {
-  aspect-ratio: 345/524; // 幅 / 高さ
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-
-  @include mq("md") {
-    aspect-ratio: 492/746;
-    grid-column: span 5;
-    grid-row: span 2;
-  }
-}
-
-.gallery__item--large img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .gallery__item {
   cursor: pointer;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  aspect-ratio: 345 / 219; // デフォルトの小さいサイズ
+
+  @include mq("md") {
+    grid-column: span 6;
+    grid-row: span 1;
+  }
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// 1, 6番目のアイテム（大きい画像）
+.gallery__item:nth-child(6n + 1),
+.gallery__item:nth-child(6n + 6) {
+  aspect-ratio: 345 / 524; // 大きい画像用
+
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+    grid-column: span 5;
+    grid-row: span 2;
+  }
 }

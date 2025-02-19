@@ -48,7 +48,7 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a href="index.html"
             ><img
               src="./assets/images/common/logo.png"
@@ -56,7 +56,7 @@
               height="38"
               width="102"
           /></a>
-        </h1>
+        </div>
         <div class="header__drawer drawer-icon js-drawer">
           <span></span>
           <span></span>
@@ -103,11 +103,11 @@
                 <a href="page-campaign.html">キャンペーン</a>
               </p>
               <ul class="sp-nav__body">
-                <li><a href="page-campaign-license.html">ライセンス取得</a></li>
+                <li><a href="page-campaign.html">ライセンス取得</a></li>
                 <li>
-                  <a href="page-campaign-trial.html">貸切体験ダイビング</a>
+                  <a href="page-campaign.html">貸切体験ダイビング</a>
                 </li>
-                <li><a href="page-campaign-trial.html">ナイトダイビング</a></li>
+                <li><a href="page-campaign.html">ナイトダイビング</a></li>
               </ul>
             </div>
             <div>
@@ -184,7 +184,7 @@
           </picture>
         </div>
         <div class="page-fv__heading">
-          <h2>Blog</h2>
+          <p>Blog</p>
         </div>
       </section>
 
@@ -199,7 +199,7 @@
                 <a href="page-blog.html">ブログ一覧</a>
               </li>
               <li class="page-breadcrumb__item">
-                <a href="page-blog-post.html">ブログ詳細</a>
+                <a href="single.html">ブログ詳細</a>
               </li>
             </ul>
           </nav>
@@ -207,50 +207,59 @@
       </div>
 
       <div
-        class="page-blog page-blog--postpage layout-page-blog layout-page-blog--postpage"
+        class="page-blog page-blog--single layout-page-blog layout-page-blog--single"
       >
         <div class="page-blog__inner inner">
-          <div class="page-blog__main blog-main blog-main--postpage">
-            <time class="blog-post__date" datetime="2023-11-17"
-              >2023.11/17</time
-            >
-            <h3 class="blog-post__heading">ライセンス取得</h3>
-            <div class="blog-post__image">
-              <img
-                src="./assets/images/common/blog-1.jpg"
-                alt="ブログ画像"
-                width="345"
-                height="231"
-                loading="lazy"
-              />
+          <div class="page-blog__main">
+            <div class="page-blog__single single-body">
+              <div class="single-body__meta">
+                <time datetime="2023-11-17" class="single-body__date"
+                  >2023.11/17</time
+                >
+              </div>
+              <div class="single-body__title">
+                <h1>ライセンス取得</h1>
+              </div>
+              <div class="single-body__image">
+                <img
+                  src="./assets/images/common/blog-1.jpg"
+                  alt="ブログ画像"
+                  width="345"
+                  height="231"
+                  loading="lazy"
+                />
+              </div>
+              <div class="single-body__content">
+                <p>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+                <figure class="single-body__image">
+                  <img
+                    src="./assets/images/common/blog-1.jpg"
+                    alt="ブログ画像"
+                    width="345"
+                    height="231"
+                    loading="lazy"
+                  />
+                </figure>
+                <p>
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+                <div class="single-body__lists">
+                  <ul>
+                    <li>リスト1</li>
+                    <li>リスト2</li>
+                    <li>リスト3</li>
+                  </ul>
+                </div>
+                <p class="blog-post__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+              </div>
             </div>
-            <p class="blog-post__text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            </p>
-            <div class="blog-post__image">
-              <img
-                src="./assets/images/common/blog-1.jpg"
-                alt="ブログ画像"
-                width="345"
-                height="231"
-                loading="lazy"
-              />
-            </div>
-            <p class="blog-post__text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            </p>
-            <div class="blog-post__lists">
-              <ul class="blog-post__list">
-                <li class="blog-post__list-item">リスト1</li>
-                <li class="blog-post__list-item">リスト2</li>
-                <li class="blog-post__list-item">リスト3</li>
-              </ul>
-            </div>
-            <p class="blog-post__text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            </p>
+
             <div
-              class="blog-main__pagination blog-main__pagination--postpage wp-pagenavi"
+              class="blog-main__pagination blog-main__pagination--single wp-pagenavi"
             >
               <a class="first" aria-label="First Page" href="#"></a>
               <a
@@ -302,10 +311,10 @@
             <div class="blog-side__inner">
               <div class="blog-side__items">
                 <div
-                  class="blog-side__item blog-side__item--postpage side-popular"
+                  class="blog-side__item blog-side__item--single side-popular"
                 >
                   <div class="side-popular__head side-item-heading">
-                    <h3>人気記事</h3>
+                    <h2>人気記事</h2>
                   </div>
                   <div class="side-popular__items">
                     <div class="side-popular__item">
@@ -360,7 +369,7 @@
                 </div>
                 <div class="blog-side__item side-voice">
                   <div class="side-voice__head side-item-heading">
-                    <h3>口コミ</h3>
+                    <h2>口コミ</h2>
                   </div>
                   <div class="side-voice__items">
                     <div class="side-voice__item">
@@ -388,7 +397,7 @@
                 </div>
                 <div class="blog-side__item side-campaign">
                   <div class="side-campaign__head side-item-heading">
-                    <h3>キャンペーン</h3>
+                    <h2>キャンペーン</h2>
                   </div>
                   <div
                     class="side-campaign__items page-campaign-cards__card page-campaign-cards__card--side"
@@ -484,38 +493,32 @@
                 </div>
                 <div class="blog-side__item side-archive">
                   <div class="side-archive__head side-item-heading">
-                    <h3>アーカイブ</h3>
+                    <h2>アーカイブ</h2>
                   </div>
                   <ul class="side-archive__menu">
                     <li class="side-archive__lists">
                       <span class="side-archive__year">2023</span>
                       <ul class="side-archive__list">
-                        <li class="side-archive__month">
-                          <a href="#">3月</a>
-                        </li>
-                        <li class="side-archive__month">
-                          <a href="#">2月</a>
-                        </li>
-                        <li class="side-archive__month">
-                          <a href="#">1月</a>
-                        </li>
+                        <li class="side-archive__month"><a href="#">3月</a></li>
+                        <li class="side-archive__month"><a href="#">2月</a></li>
+                        <li class="side-archive__month"><a href="#">1月</a></li>
                       </ul>
                     </li>
                     <li class="side-archive__lists">
                       <span class="side-archive__year">2022</span>
+                      <ul class="side-archive__list">
+                        <li class="side-archive__month">
+                          <a href="#">12月</a>
+                        </li>
+                        <li class="side-archive__month">
+                          <a href="#">11月</a>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="page-blog__content page-blog__content--page page-content">
-        <div class="page-content__wrapper">
-          <div class="page-content__main page-content__main--page">
-            <div class="page-content__main-inner"></div>
           </div>
         </div>
       </div>
@@ -606,11 +609,11 @@
                 <a href="page-campaign.html">キャンペーン</a>
               </p>
               <ul class="footer-nav__body">
-                <li><a href="page-campaign-license.html">ライセンス取得</a></li>
+                <li><a href="page-campaign.html">ライセンス取得</a></li>
                 <li>
-                  <a href="page-campaign-trial.html">貸切体験ダイビング</a>
+                  <a href="page-campaign.html">貸切体験ダイビング</a>
                 </li>
-                <li><a href="page-campaign-trial.html">ナイトダイビング</a></li>
+                <li><a href="page-campaign.html">ナイトダイビング</a></li>
               </ul>
               <div>
                 <p class="footer-nav__heading">

@@ -25,15 +25,16 @@
   }
 }
 
-.page-faq__accordion {
-  margin-inline: auto;
+.page-faq__inner {
   max-width: rem(500);
-  position: relative;
-  width: 100%;
-  margin-top: rem(50);
 
   @include mq("md") {
     max-width: rem(700);
-    margin-top: rem(150);
   }
+}
+
+.page-faq__accordion {
+  margin-inline: auto;
+  position: relative;
+  width: 100%;
 }
