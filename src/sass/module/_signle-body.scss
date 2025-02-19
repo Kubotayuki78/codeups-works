@@ -48,26 +48,29 @@
   }
 }
 
-.single-body__content li {
+.single-body__content figure {
+  margin-top: rem(24);
+  width: 100%;
+  height: auto;
 
+  @include mq("md") {
+    margin-top: rem(40);
+    width: 99%;
+  }
 }
 
-
-.single-body__lists {
+.single-body__content ul {
   margin-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
 
   @include mq("md") {
     margin-top: rem(40);
   }
 }
 
-.single-body ul {
-  display: flex;
-  flex-direction: column;
-  gap: rem(4);
-}
-
-.single-body li {
+.single-body__content li {
   display: flex;
   align-items: flex-start; /* アイコンをリストの上に寄せる */
   gap: rem(10);
@@ -75,7 +78,7 @@
   padding-left: rem(27); /* アイコンの位置調整 */
 }
 
-.single-body li::before {
+.single-body__content li::before {
   content: "";
   width: rem(18);
   height: rem(18);

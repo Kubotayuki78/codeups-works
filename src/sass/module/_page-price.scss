@@ -26,9 +26,9 @@
 }
 
 .page-price__inner {
-  max-width: rem(600);
+  max-width: calc(rem(600) + rem(25) * 2);
 
   @include mq("md") {
-    max-width: rem(702);
+    max-width: calc(rem(702) + rem(25) * 2);
   }
 }

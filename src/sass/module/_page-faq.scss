@@ -26,10 +26,10 @@
 }
 
 .page-faq__inner {
-  max-width: rem(500);
+  max-width: calc(rem(500) + rem(25) * 2);
 
   @include mq("md") {
-    max-width: rem(700);
+    max-width: calc(rem(700) + rem(25) * 2);
   }
 }
 

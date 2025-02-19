@@ -67,7 +67,6 @@
   margin-top: rem(4);
 }
 
-
 .form-field__item.form-field__item--select {
   margin-top: rem(-2);
 }
@@ -144,7 +143,7 @@
 
   @include mq("md") {
     padding: calc(rem(7) - rem(1)) calc(rem(20) - rem(1)) calc(rem(6) - rem(1))
-    calc(rem(8)) - rem(1);
+      calc(rem(8)) - rem(1);
   }
 }
 
@@ -221,10 +220,10 @@
   border-left: rem(2) solid #c94800;
   border-bottom: rem(2) solid #c94800;
   transform: rotate(-45deg);
-  left: rem(-30);
-  top: rem(4);
+  left: rem(-26);
+  top: rem(5);
 
   @include mq("md") {
-    margin-top: 0.8px;
+    left: rem(-30);
   }
 }

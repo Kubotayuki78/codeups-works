@@ -27,7 +27,7 @@
 
 .page-contact__inner {
   @include mq("md") {
-    max-width: rem(700);
+    max-width: calc(rem(700) + rem(25) * 2);
     margin-left: auto;
     margin-right: auto;
   }
@@ -52,4 +52,3 @@
     margin-top: 38px;
   }
 }
-

@@ -2,7 +2,7 @@
 .faq-accordion-lists {
   display: flex;
   flex-direction: column;
-  gap: rem(38);
+  gap: rem(40);
 
   @include mq("md") {
     gap: rem(40);

@@ -145,7 +145,7 @@ jQuery(function ($) {
   //モーダルウィンドウ
   $(document).ready(function () {
     // 変数に要素を格納
-    var trigger = $(".js-modal__trigger"),
+    var trigger = $(".js-modal-gallery"),
       wrapper = $(".modal__wrapper"),
       layer = $(".modal__layer"),
       container = $(".modal__container"),
@@ -188,7 +188,7 @@ jQuery(function ($) {
       $(this).next(".faq-accordion__content").slideToggle(300);
 
       // タイトルに `open` クラスを付け外しして矢印の向きを変更
-      $(this).toggleClass("open");
+      $(this).toggleClass("close");
     });
   });
 

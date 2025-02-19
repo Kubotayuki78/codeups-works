@@ -21,7 +21,7 @@
 }
 
 .faq-accordion__content {
-  padding: rem(24) rem(16);
+  padding: rem(22) rem(16) rem(24);
 
   @include mq("md") {
     padding: calc(rem(40) - rem(1));
@@ -55,14 +55,14 @@
 
 .faq-accordion__title::before,
 .faq-accordion__title::after {
-  background: #fff; /* 線の色 */
+  background: $white;
   content: "";
-  height: rem(2); /* 線の太さ */
+  height: rem(2);
   position: absolute;
   right: rem(16);
-  top: 50%; /* 線の位置を縦中央に */
-  transform: rotate(90deg); /* 線を縦に */
-  width: rem(28); /* 線の幅 */
+  top: 50%;
+  width: rem(28);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   @include mq("md") {
     right: rem(40);
@@ -70,24 +70,21 @@
   }
 }
 
-/* 縦線（デフォルト） */
+/* デフォルト：マイナス（−） */
 .faq-accordion__title::before {
-  transition: transform 0.3s ease-in-out;
+  opacity: 0; /* 縦線を非表示 */
 }
 
-/* 横線（デフォルト） */
 .faq-accordion__title::after {
-  transform: rotate(180deg); /* 開いていない時はプラスに見せる */
-  opacity: 1; /* 開いていない時は横線を消す（プラスに見える） */
-  transition: opacity 0.3s ease-in-out;
+  transform: rotate(0deg); /* 横線をそのまま維持（マイナス） */
 }
 
-/* 縦線（クリック後） */
-.faq-accordion__title.open::before {
-  transform: rotate(0deg); /* 開いた時に縦線だけになる（マイナスに見せる） */
+/* クローズ（＋に変更） */
+.faq-accordion__title.close::before {
+  opacity: 1; /* 縦線を表示 */
+  transform: rotate(90deg); /* ＋の縦線 */
 }
 
-/* 横線（クリック後） */
-.faq-accordion__title.open::after {
-  opacity: 0; /* 開いた時に横線を表示（マイナスにする） */
+.faq-accordion__title.close::after {
+  transform: rotate(0deg); /* 横線をそのまま維持 */
 }
