@@ -10,8 +10,8 @@
 
 .wp-pagenavi span.current,
 .wp-pagenavi a.page,
-.wp-pagenavi .extend,
-.wp-pagenavi .first {
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
   width: rem(38);
   height: rem(38);
   display: flex;
@@ -41,46 +41,60 @@
 
 .wp-pagenavi .first,
 .wp-pagenavi .next {
-  display: none;
+  // display: none;
 }
 
+/* 前後リンクボタン */
 .previouspostslink,
 .nextpostslink {
-  border: 1px solid #408f95; /* 枠の色 */
-  padding: rem(7) rem(12); /* 枠とSVGの間の余白 */
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $accent-color; /* 枠の色 */
   background-color: $white;
   width: rem(38);
   height: rem(38);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* SVGアイコンの設定（CSS内にアイコンを埋め込む） */
+.previouspostslink::before,
+.nextpostslink::before {
+  content: "";
+  width: rem(10);
+  height: rem(18);
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+/* 前のページアイコン (左矢印) */
+.previouspostslink::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none"><path d="M9 1L1 9L9 17" stroke="%23408F95" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+/* 次のページアイコン (右矢印) */
+.nextpostslink::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18" fill="none"><path d="M1 1L9 9L1 17" stroke="%23408F95" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+@media (any-hover: hover) {
+  .previouspostslink:hover::before,
+  .nextpostslink:hover::before {
+    filter: brightness(0) invert(1); /* アイコンの色を反転（白色に） */
+  }
+}
+
+.previouspostslink:hover,
+.nextpostslink:hover {
+  background-color: $accent-color;
 }
 
 .previouspostslink {
   margin-right: rem(28);
-}
-
-.previouspostslink svg,
-.nextpostslink svg {
-  width: 10px;
-  height: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.previouspostslink svg path,
-.nextpostslink svg path {
-  stroke: #408f95;
-  transition: all 0.3s ease;
-}
-
-@media (any-hover: hover) {
-  .previouspostslink:hover path,
-  .nextpostslink:hover path {
-    stroke: $white;
-  }
-}
-.previouspostslink:hover,
-.nextpostslink:hover {
-  background-color: $accent-color;
 }
 
 .nextpostslink {

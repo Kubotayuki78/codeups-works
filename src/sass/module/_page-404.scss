@@ -1,14 +1,15 @@
 @use "global" as *;
 
 .page-404 {
-  padding-top: rem(80);
+  padding-top: rem(32);
   padding-bottom: rem(40);
   color: $white;
   position: relative;
+  background-color: $accent-color;
 
   @include mq("md") {
-    padding-top: rem(90);
-    padding-bottom: rem(148);
+    padding-top: rem(56);
+    padding-bottom: rem(144);
   }
 }
 
@@ -22,7 +23,7 @@
   background-size: contain;
   width: rem(328);
   height: 100%;
-  top: rem(84);
+  top: rem(85);
   left: 50%;
   transform: translateX(-50%);
 
@@ -30,10 +31,9 @@
     width: rem(665);
     left: calc(50% - rem(522));
     transform: translateX(0);
-    top: rem(126);
+    top: rem(85);
   }
 }
-
 
 .page-404__inner {
 }

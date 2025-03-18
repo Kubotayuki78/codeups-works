@@ -3,20 +3,19 @@
 .page-sitemap-nav {
 }
 
-.page-sitemap-nav__items {
+.page-sitemap-nav__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  gap: rem(33) rem(27);
 
   @include mq("md") {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
   }
 }
 
 .page-sitemap-nav__item--1 {
   order: 1;
-  padding-left: rem(9);
+  padding-left: rem(12);
 }
 
 .page-sitemap-nav__item--2 {
@@ -33,8 +32,7 @@
 
 .page-sitemap-nav__item--3 {
   order: 2;
-  padding-left: rem(1);
-  padding-left: rem(19);
+  padding-left: rem(18);
 
   @include mq("md") {
     order: 3;
@@ -44,62 +42,51 @@
 
 .page-sitemap-nav__item--4 {
   order: 4;
-  padding-left: rem(19);
-  margin-top: rem(-3);
+  padding-left: rem(18);
 
   @include mq("md") {
     padding-left: rem(94);
-    margin-top: 0;
   }
 }
 
-.page-sitemap-nav__heading {
-  position: relative;
+.page-sitemap-nav__items .page-sitemap-nav__item:not(:first-child) {
+  margin-top: rem(18);
 }
 
-.page-sitemap-nav__heading::after {
+.page-sitemap-nav__items .page-sitemap-nav__item--head:not(:first-child) {
+  margin-top: rem(34);
+}
+
+.page-sitemap-nav__item--head::after {
   content: "";
   display: block;
   width: rem(18);
   height: rem(18);
   background-image: url("../images/common/icon-black.png");
-
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: rem(22);
-  left: rem(-9);
+  top: rem(4);
+  left: rem(-11);
 }
-
-.page-sitemap-nav__heading a {
-  font-weight: $bold;
-  display: block;
-  padding: rem(21) rem(15);
-  line-height: 1;
-
-  @include mq("md") {
-    padding-right: 0;
-  }
-}
-
-@media (any-hover: hover) {
-  .page-sitemap-nav__heading a:hover,
-  .page-sitemap-nav__body li a:hover {
-    opacity: 0.6;
-  }
-}
-
-.page-sitemap-nav__body li a {
-  display: block;
-  padding: rem(13) rem(15);
-  line-height: 1;
+.page-sitemap-nav__item {
+  padding-left: rem(12);
+  line-height: 1.5;
   white-space: nowrap;
 }
 
-.page-sitemap-nav__body li:nth-of-type(1) {
-  margin-top: rem(-8);
+.page-sitemap-nav__item--head {
+  position: relative;
+  font-weight: $bold;
+  line-height: 1.5;
 }
 
-.page-sitemap-nav__body li:last-of-type {
-  margin-bottom: rem(8);
+.page-sitemap-nav__item--head--lh {
+  line-height: 1.2;
+}
+
+@media (any-hover: hover) {
+  .page-sitemap-nav__item a:hover {
+    opacity: 0.6;
+  }
 }

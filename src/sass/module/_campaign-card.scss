@@ -138,6 +138,7 @@
   font-family: "Lato";
   line-height: 1;
   font-weight: $bold;
+  white-space: nowrap;
 }
 
 .campaign-card__price-before {
@@ -193,7 +194,7 @@
 
 .campaign-card__foot--page {
   @include mq("md") {
-    padding-bottom: rem(43);
+    padding-bottom: rem(36);
   }
 }
 

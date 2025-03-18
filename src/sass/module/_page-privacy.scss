@@ -26,6 +26,10 @@
 }
 
 .page-privacy__contents {
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 2;
+
   @include mq("md") {
     max-width: rem(800);
     width: 100%;
@@ -34,7 +38,7 @@
   }
 }
 
-.page-privacy__title {
+.page-privacy__contents h2 {
   font-size: rem(24);
   font-weight: 500;
   line-height: normal;
@@ -44,40 +48,25 @@
   }
 }
 
-.page-privacy__contents {
-  font-size: rem(16);
-  font-weight: 400;
-  line-height: 2;
+.page-privacy__contents p {
+  margin-top: rem(32);
 }
 
-.page-privacy__text-top {
+.page-privacy__contents p:first-of-type {
   margin-top: rem(40);
 }
-
-.page-privacy__text {
+.page-privacy__contents ol:first-of-type {
   margin-top: rem(32);
 }
 
-.page-privacy__lists {
-  margin-top: rem(32);
-}
-
-.page-privacy__list {
-  // margin-top: rem(32);
-}
-
-.page-privacy__list ul li {
+.page-privacy__contents ol li {
   padding-left: rem(24);
   position: relative;
   counter-increment: my-counter; /* カウンターを増やす */
 }
 
-.page-privacy__list ul li::before {
+.page-privacy__contents ol li::before {
   content: counter(my-counter) "."; /* カウンターの値を表示 */
   position: absolute;
   left: rem(5);
-}
-
-.page-privacy__list ul li strong {
-  font-weight: 400;
 }

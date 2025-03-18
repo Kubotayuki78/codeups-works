@@ -1,8 +1,8 @@
 @use "global" as *;
 .layout-page-sitemap {
-  margin-top: rem(32);
+  margin-top: rem(48);
 
 @include mq("md") {
-  margin-top: rem(129);
+  margin-top: rem(150);
 }
 }

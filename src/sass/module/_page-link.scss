@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.page-link {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(82);
+}
+
+@media (hover: hover) {
+  .page-link__prev:hover,
+  .page-link__next:hover {
+    background: $accent-color;
+    fill: #fff;
+  }
+}
+
+/* 前後リンクボタン */
+/* 前後リンクボタン */
+.page-link__prev,
+.page-link__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $accent-color; /* 枠の色 */
+  background-color: $white;
+  width: rem(38); /* クリック領域を拡大 */
+  height: rem(38); /* クリック領域を拡大 */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* クリック領域を `a` タグ全体に適用 */
+.page-link__prev a,
+.page-link__next a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* SVGアイコンの設定（CSS内にアイコンを埋め込む） */
+.page-link__prev::before,
+.page-link__next::before {
+  content: "";
+  width: rem(10);
+  height: rem(18);
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+/* 前のページアイコン (左矢印) */
+.page-link__prev::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="22" viewBox="0 0 10 18" fill="none"><path d="M9 1L1 9L9 17" stroke="%23408F95" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+/* 次のページアイコン (右矢印) */
+.page-link__next::before {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="22" viewBox="0 0 10 18" fill="none"><path d="M1 1L9 9L1 17" stroke="%23408F95" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+@media (any-hover: hover) {
+  .page-link__next:hover::before,
+  .page-link__prev:hover::before {
+    filter: brightness(0) invert(1); /* アイコンの色を反転（白色に） */
+  }
+}

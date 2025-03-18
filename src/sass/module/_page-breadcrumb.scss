@@ -5,6 +5,7 @@
 .page-breadcrumb__items {
   display: flex;
   gap: rem(6);
+  align-items: center;
 }
 
 .page-breadcrumb__item {
@@ -12,6 +13,7 @@
   display: flex;
   gap: rem(6);
   align-items: center;
+  top: rem(2);
 }
 
 .page-breadcrumb__item:not(:last-child)::after {
@@ -28,7 +30,6 @@
   content: "";
   display: block;
   height: rem(10);
-  margin: 0;
   opacity: 0.8;
   width: rem(10);
 
@@ -57,7 +58,15 @@
   padding-left: 0;
 }
 
+.post.post-post.current-item {
+  font-size: rem(14);
+}
+
 .page-breadcrumb--white li:not(:last-child)::after {
   filter: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(201%)
     hue-rotate(162deg) brightness(118%) contrast(100%);
+}
+
+.current-item {
+  font-size: rem(14);
 }

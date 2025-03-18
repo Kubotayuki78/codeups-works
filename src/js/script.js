@@ -64,7 +64,7 @@ jQuery(function ($) {
     let target = $(this.hash);
     if (!target.length) return;
     let targetY = target.offset().top - header;
-    $("html,body").animate({ sscrollTop: targetY }, time, "swing");
+    $("html,body").animate({ scrollTop: targetY }, time, "swing");
     return false;
   });
 
@@ -101,7 +101,7 @@ jQuery(function ($) {
           prevEl: ".swiper-button-prev",
         },
       },
-      1200: {
+      1400: {
         loop: true, //繰り返し指定
         spaceBetween: 42, //スライド感の余白
         slidesPerView: "3.97", //一度に表示するスライド枚数
@@ -192,7 +192,7 @@ jQuery(function ($) {
     });
   });
 
-  //Informationタブの切替
+  // //Informationタブの切替
   $(document).ready(function () {
     // タブ切り替え処理
     function switchTab(selectedTab) {

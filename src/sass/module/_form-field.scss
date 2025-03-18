@@ -9,6 +9,15 @@
   }
 }
 
+/* 1. `contact-fields__field` の最後の `.form-field` だけ適用 */
+.contact-fields__field:last-child .form-field {
+  padding-bottom: rem(20);
+
+  @include mq("md") {
+    padding-bottom: rem(34);
+  }
+}
+
 .form-field__head {
   display: flex;
   align-items: center;
@@ -40,8 +49,16 @@
 }
 
 .form-field__item {
-  margin-top: rem(16);
+  margin-top: rem(-10);
   flex-grow: 1;
+
+  @include mq("md") {
+    margin-top: rem(-23);
+  }
+}
+
+.form-field__item.form-field__item--textarea {
+  margin-top: rem(14);
 
   @include mq("md") {
     margin-top: 0;
@@ -64,11 +81,18 @@
 }
 
 .form-field__item.form-field__item--radio {
-  margin-top: rem(4);
+  margin-top: rem(12);
+
+  @include mq("md") {
+    margin-top: rem(4);
+  }
 }
 
 .form-field__item.form-field__item--select {
-  margin-top: rem(-2);
+  margin-top: rem(14);
+  @include mq("md") {
+    margin-top: rem(-2);
+  }
 }
 
 .form-text {
@@ -79,7 +103,7 @@
   transition: border-color 0.3s;
 }
 
-.from-radio {
+.form-radio {
   line-height: calc(23 / 16);
 }
 
@@ -88,7 +112,7 @@
   opacity: 1;
 }
 
-.from-radio__input {
+.form-radio__input {
   width: 1px;
   height: 1px;
   position: absolute;
@@ -96,22 +120,22 @@
   overflow: hidden;
 }
 
-.from-radio__input:checked + .from-radio__text::after {
+.form-radio__input:checked + .form-radio__text::after {
   opacity: 1;
 }
 
-.from-radio__text {
+.form-radio__text {
   padding-left: rem(22);
   position: relative;
 }
 
-.from-radio__text::before,
-.from-radio__text::after {
+.form-radio__text::before,
+.form-radio__text::after {
   content: "";
   position: absolute;
 }
 
-.from-radio__text::before {
+.form-radio__text::before {
   top: 50%;
   transform: translateY(-50%);
   width: rem(14);
@@ -121,7 +145,7 @@
   transition: border-color 0.3s;
 }
 
-.from-radio__text::after {
+.form-radio__text::after {
   left: rem(3);
   opacity: 0;
   width: rem(9);
@@ -148,14 +172,15 @@
 }
 
 .form-field__item--textarea {
-  display: flex;
+  // display: flex;
 }
 
 .form-textarea {
   border: 1px solid $accent-color;
+
   background: #fff;
   width: 100%;
-  height: rem(200);
+  height: rem(198);
   padding: rem(8);
   transition: border-color 0.3s;
 }
@@ -169,19 +194,48 @@
 .form-field__radio {
 }
 
-.form-checkbox__input {
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
+// .form-checkbox__input {
+//   width: 1px;
+//   height: 1px;
+//   position: absolute;
+//   clip: rect(0, 0, 0, 0);
+//   overflow: hidden;
 
-  &:checked {
-    + .form-checkbox__text {
-      &::after {
-        opacity: 1;
-      }
-    }
+//   &:checked {
+//     + .form-checkbox__text {
+//       &::after {
+//         opacity: 1;
+//       }
+//     }
+//   }
+// }
+
+/* ✅ 承認確認用のチェックボックス（your-privacy だけ適用） */
+.wpcf7-acceptance .wpcf7-list-item-label::before {
+  width: rem(22);
+  height: rem(22);
+  left: rem(-9);
+  top: rem(10);
+
+  @include mq("md") {
+    top: rem(12);
+    left: rem(-32);
+  }
+}
+
+/* ✅ 承認確認のチェックボックス（acceptance のみ） */
+.wpcf7-acceptance
+  input[type="checkbox"]:checked
+  + .wpcf7-list-item-label::after {
+  border-bottom: rem(2) solid #c94800;
+  border-left: rem(2) solid #c94800;
+  height: rem(8);
+  width: rem(12);
+  left: rem(-4);
+  top: rem(5);
+
+  @include mq("md") {
+    left: rem(-27);
   }
 }
 
@@ -198,32 +252,143 @@
   position: absolute;
 }
 
-.form-checkbox__text::before {
-  width: rem(22);
-  height: rem(22);
-  border: rem(1) solid $accent-color;
-  transition: border-color 0.3s;
-  top: 0;
-  left: rem(-30);
+//コンタクトフォーム7のラジオボタンのスタイル
+.wpcf7-list-item {
+  margin: 0;
+}
+
+.wpcf7-list-item-label {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  padding-left: rem(22);
 
   @include mq("md") {
-    margin-top: rem(2);
-    left: rem(-35);
-    top: rem(-3);
+    padding-left: rem(21);
   }
 }
 
-.form-checkbox__text::after {
-  opacity: 0;
+.wpcf7-list-item {
+  display: block;
+  margin: 0;
+
+  &:not(:first-of-type) {
+    margin-top: rem(4);
+  }
+}
+
+/* チェック前のボタン */
+.wpcf7-list-item-label::before {
+  border: 1px solid $accent-color;
+  content: "";
+  height: rem(14);
+  margin-bottom: auto;
+  margin-right: 0.5em;
+  transition: background-color 0.3s; /* 色をじんわり変化させる */
   width: rem(14);
-  height: rem(8);
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+}
+
+/* チェック後のボタン */
+input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
+  left: rem(3);
+  position: absolute;
+  opacity: 1;
+  width: rem(9);
+  height: rem(5);
   border-left: rem(2) solid #c94800;
   border-bottom: rem(2) solid #c94800;
   transform: rotate(-45deg);
-  left: rem(-26);
-  top: rem(5);
+  top: rem(8);
+}
+
+.form-checkbox .wpcf7-list-item-label {
+  padding-left: rem(19);
 
   @include mq("md") {
-    left: rem(-30);
+    padding-left: rem(5);
   }
+}
+
+.wpcf7-spinner {
+  display: none !important;
+}
+
+input[type="submit"] {
+  color: $white;
+}
+
+@media (any-hover: hover) {
+  .btn:hover input[type="submit"] {
+    color: $accent-color;
+  }
+}
+
+.btn input {
+  position: relative;
+}
+
+.btn input::before {
+  position: absolute;
+  right: rem(-4);
+  top: rem(4);
+  width: rem(10);
+  height: rem(10);
+  transition: 0.3s;
+  content: "";
+  background-color: red;
+  z-index: -1;
+}
+
+//送信成功時のメッセージを非表示
+.wpcf7-form.sent .wpcf7-response-output {
+  display: none;
+}
+
+/* エラー時の枠線と背景色 */
+.wpcf7-form-control.wpcf7-not-valid {
+  border: 1px solid #c94800;
+  background: rgba(201, 72, 0, 0.2);
+}
+
+/* エラー時のプレースホルダーの色を変更 */
+.wpcf7-form-control.wpcf7-not-valid::placeholder {
+  color: #fff; /* 白に変更 */
+  opacity: 1; /* 一部のブラウザでは `opacity` を調整しないと薄くなる */
+}
+
+/* エラー時のテキストエリアのスタイル */
+.wpcf7-form-control.wpcf7-textarea.wpcf7-not-valid {
+  border: 1px solid #c94800;
+
+  background: rgba(201, 72, 0, 0.2);
+}
+
+/* エラーメッセージのカスタマイズ */
+.wpcf7-not-valid-tip {
+  color: #c94800; /* エラーメッセージの色 */
+  margin-top: rem(8);
+}
+
+/* チェックボックスの基本デザイン */
+.wpcf7-form-control.wpcf7-checkbox {
+  display: flex;
+  flex-direction: column; /* 縦並びを維持 */
+}
+
+/* 成功メッセージを非表示にする */
+.wpcf7-mail-sent-ok {
+  display: none !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+  color: #c94800;
+  font-size: rem(14);
+  border: none;
+  text-align: center;
 }

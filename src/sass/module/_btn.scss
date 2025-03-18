@@ -5,6 +5,7 @@
   align-items: center;
   width: rem(202);
   padding: rem(16) rem(40);
+  margin-bottom: rem(2);
   font-family: $english-family;
   background-color: $accent-color;
   font-size: rem(14);
@@ -14,96 +15,10 @@
   position: relative;
   z-index: 1;
   transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
-}
 
-.btn--send {
-  padding: rem(16) rem(56);
-}
-
-.btn::before {
-  position: absolute;
-  right: rem(-4);
-  top: rem(4);
-  width: 100%;
-  height: 100%;
-  border: rem(1) solid $accent-color;
-  transition: 0.3s;
-  content: "";
-  z-index: -1;
-}
-
-.btn::after {
-  background: $white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
-  z-index: -1;
-}
-
-@media (any-hover: hover) {
-  .btn:hover {
-    color: $accent-color;
+  @include mq("md") {
+    margin-bottom: rem(6);
   }
-
-  .btn:hover::after {
-    transform: scale(1, 1);
-  }
-
-  .btn:hover span::before,
-  .btn:hover span::after {
-    background-color: $accent-color;
-  }
-}
-
-.btn span::before,
-.btn span::after {
-  content: "";
-  position: absolute;
-  background-color: $white;
-  transition: 0.5s;
-}
-
-.btn span::before {
-  top: calc(50% - rem(2));
-  right: rem(40);
-  transform: translateY(calc(-50% - rem(1))) rotate(37deg);
-  width: rem(10);
-  height: rem(1);
-}
-
-.btn span::after {
-  top: 50%;
-  right: rem(40);
-  transform: translateY(-50%);
-  width: rem(40);
-  height: rem(1);
-}
-
-.btn {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  width: rem(202);
-  padding: rem(16) rem(40);
-  font-family: $english-family;
-  background-color: $accent-color;
-  font-size: rem(14);
-  color: $white;
-  border: rem(1) solid $accent-color;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
-}
-
-.btn--send {
-  padding: rem(16) rem(56);
 }
 
 .btn::before {
@@ -203,4 +118,91 @@
 .btn--white span::before,
 .btn--white span::after {
   background-color: $accent-color;
+}
+
+//btn--submit
+.btn-submit {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  width: rem(202);
+  max-width: 100%;
+  font-family: $english-family;
+  background-color: $accent-color;
+  font-size: rem(14);
+  color: $white;
+  position: relative;
+  z-index: 1;
+}
+
+/* ホバー時に背景が左から右に移動するアニメーション */
+.btn-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: left;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.btn-submit:hover::before {
+  transform: translateX(100%);
+}
+
+.btn-submit input[type="submit"] {
+  border: 1px solid $accent-color;
+  color: $white;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: normal;
+  height: 100%;
+  padding: rem(16) rem(56);
+  position: relative;
+  text-align: left;
+  width: 100%;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+/* ホバー時にテキスト色を変える */
+.btn-submit:hover input[type="submit"] {
+  color: $accent-color;
+}
+
+/* 矢印のデザイン */
+.btn-submit__arrow {
+  left: 50%;
+  margin-left: rem(17);
+  position: absolute;
+  width: rem(40);
+  z-index: 2;
+  border-bottom: 1px solid $white;
+  border-right: 1px solid $white;
+  height: rem(6);
+  margin-left: rem(8);
+  transform: skew(45deg);
+  transition: border-color 0.4s ease-in-out;
+}
+
+
+/* ホバー時に矢印の色も変更 */
+.btn-submit:hover .btn-submit__arrow {
+  border-bottom: 1px solid $accent-color;
+  border-right: 1px solid $accent-color;
+}
+
+.btn-submit::after {
+  border: 1px solid $accent-color;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: rem(-4);
+  top: rem(4);
+  width: 100%;
+  z-index: -999;
 }
