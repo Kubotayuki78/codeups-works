@@ -1172,8 +1172,6 @@ div.colorbox-fv img {
 	font-size: 0.75rem;
 	letter-spacing: 0.001em;
 	line-height: 1.8;
-	margin: 0 calc(50% - 50vw);
-	width: 100vw;
 }
 
 .form-field {
