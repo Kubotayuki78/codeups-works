@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-<main>
   <div class="page-404">
 
     <!-- breadcrumb -->
@@ -20,6 +19,5 @@
       </div>
     </div>
   </div>
-</main>
 
 <?php get_footer(); ?>

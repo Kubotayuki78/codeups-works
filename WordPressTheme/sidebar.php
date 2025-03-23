@@ -1,4 +1,4 @@
-<aside class="page-blog__side blog-side">
+<aside class="blog-side">
   <div class="blog-side__inner">
     <div class="blog-side__items">
       <div class="blog-side__item side-popular<?php echo is_single() ? ' blog-side__item--single' : ''; ?>">
@@ -129,16 +129,25 @@
                 </div>
                 <div class="campaign-card__foot campaign-card__padding24 campaign-card__foot--side">
                   <p class="campaign-card__text campaign-card__text--side">全部コミコミ(お一人様)</p>
-                  <!-- ここが表示されない -->
-                  <div class="campaign-card__price">
-                    <p class="campaign-card__price-before campaign-card__price-before--side">
-                      ¥<?php the_field('before'); ?>
-                    </p>
-                    <p class="campaign-card__price-after campaign-card__price-after--side">
-                      ¥<?php the_field('after'); ?>
-                    </p>
-                  </div>
-                  <!-- ここが表示されない -->
+                  <?php
+                  $before = get_field('before');
+                  $after  = get_field('after');
+                  // どちらかに値があるときのみ表示
+                  if ($before || $after) : ?>
+                    <div class="campaign-card__price">
+                      <?php if ($before) : ?>
+                        <p class="campaign-card__price-before campaign-card__price-before--side">
+                          ¥<?php echo esc_html($before); ?>
+                        </p>
+                      <?php endif; ?>
+                      <?php if ($after) : ?>
+                        <p class="campaign-card__price-after campaign-card__price-after--side">
+                          ¥<?php echo esc_html($after); ?>
+                        </p>
+                      <?php endif; ?>
+                    </div>
+                  <?php endif; ?>
+
                 </div>
               </a>
             <?php endwhile;

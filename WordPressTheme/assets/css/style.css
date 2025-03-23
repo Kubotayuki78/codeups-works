@@ -215,7 +215,7 @@ a {
 	margin-top: 3.25rem;
 }
 
-.layout-page-terms {
+.layout-page-page {
 	margin-top: 3.25rem;
 }
 
@@ -2095,6 +2095,63 @@ input[type=submit] {
 	text-align: center;
 }
 
+.page-page {
+	position: relative;
+}
+
+.page-page::after {
+	background-image: url("../images/common/deco-fishes-to-right.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 3.4375rem; /*画像の高さ*/
+	left: calc(50% - min(46%, 23.25rem));
+	position: absolute;
+	top: -1.5rem;
+	vertical-align: middle;
+	width: 7.5rem; /*画像の幅*/
+	z-index: -1;
+}
+
+.page-content {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.page-content h2 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.page-content p:first-of-type {
+	margin-top: 2.5rem;
+}
+
+.page-content p:last-of-type {
+	margin-top: 2rem;
+}
+
+.page-content ol {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+
+.page-content ol li {
+	counter-increment: my-counter; /* カウンターを増やす */
+	padding-left: 1.5rem;
+	position: relative;
+}
+
+.page-content ol li::before {
+	content: counter(my-counter) "."; /* カウンターの値を表示 */
+	left: 0.3125rem;
+	position: absolute;
+}
+
 .page-faq {
 	position: relative;
 }
@@ -2260,6 +2317,25 @@ input[type=submit] {
 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="22" viewBox="0 0 10 18" fill="none"><path d="M1 1L9 9L1 17" stroke="%23408F95" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
 
+.page-page {
+	position: relative;
+}
+
+.page-page::after {
+	background-image: url("../images/common/deco-fishes-to-right.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: ""; /*何も入れない*/
+	display: inline-block;
+	height: 3.4375rem; /*画像の高さ*/
+	left: calc(50% - min(46%, 23.25rem));
+	position: absolute;
+	top: -1.5rem;
+	vertical-align: middle;
+	width: 7.5rem; /*画像の幅*/
+	z-index: -1;
+}
+
 .page-price-lists {
 	display: flex;
 	flex-direction: column;
@@ -2287,61 +2363,6 @@ input[type=submit] {
 
 .page-price__inner {
 	max-width: 40.625rem;
-}
-
-.page-privacy {
-	position: relative;
-}
-
-.page-privacy::after {
-	background-image: url("../images/common/deco-fishes-to-right.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: ""; /*何も入れない*/
-	display: inline-block;
-	height: 3.4375rem; /*画像の高さ*/
-	left: calc(50% - min(46%, 23.25rem));
-	position: absolute;
-	top: -1.5rem;
-	vertical-align: middle;
-	width: 7.5rem; /*画像の幅*/
-	z-index: -1;
-}
-
-.page-privacy__contents {
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 2;
-}
-
-.page-privacy__contents h2 {
-	font-size: 1.5rem;
-	font-weight: 500;
-	line-height: normal;
-}
-
-.page-privacy__contents p {
-	margin-top: 2rem;
-}
-
-.page-privacy__contents p:first-of-type {
-	margin-top: 2.5rem;
-}
-
-.page-privacy__contents ol:first-of-type {
-	margin-top: 2rem;
-}
-
-.page-privacy__contents ol li {
-	counter-increment: my-counter; /* カウンターを増やす */
-	padding-left: 1.5rem;
-	position: relative;
-}
-
-.page-privacy__contents ol li::before {
-	content: counter(my-counter) "."; /* カウンターの値を表示 */
-	left: 0.3125rem;
-	position: absolute;
 }
 
 .page-sitemap-nav__content {
@@ -2461,69 +2482,6 @@ input[type=submit] {
 	margin-left: auto;
 	margin-right: auto;
 	width: 21.5625rem;
-}
-
-.page-terms {
-	position: relative;
-}
-
-.page-terms::after {
-	background-image: url("../images/common/deco-fishes-to-right.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: ""; /*何も入れない*/
-	display: inline-block;
-	height: 3.4375rem; /*画像の高さ*/
-	left: calc(50% - min(46%, 23.25rem));
-	position: absolute;
-	top: -1.5rem;
-	vertical-align: middle;
-	width: 7.5rem; /*画像の幅*/
-	z-index: -1;
-}
-
-.page-terms__title {
-	font-size: 1.5rem;
-	font-weight: 500;
-	line-height: normal;
-}
-
-.page-terms__content {
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 2;
-}
-
-.page-terms__content h2 {
-	font-size: 1.5rem;
-	font-weight: 500;
-	line-height: normal;
-}
-
-.page-terms__content p:first-of-type {
-	margin-top: 2.5rem;
-}
-
-.page-terms__content p:last-of-type {
-	margin-top: 2rem;
-}
-
-.page-terms__content ol {
-	display: flex;
-	flex-direction: column;
-	margin-top: 2rem;
-}
-
-.page-terms__content ol li {
-	counter-increment: my-counter; /* カウンターを増やす */
-	padding-left: 1.5rem;
-	position: relative;
-}
-
-.page-terms__content ol li::before {
-	content: counter(my-counter) "."; /* カウンターの値を表示 */
-	left: 0.3125rem;
-	position: absolute;
 }
 
 .page-thanks {
@@ -3561,7 +3519,7 @@ html {
 	margin-top: 9.375rem;
 }
 
-.layout-page-terms {
+.layout-page-page {
 	margin-top: 9.375rem;
 }
 
@@ -4427,6 +4385,24 @@ html {
 	margin-top: 2.5rem;
 }
 
+.page-page::after {
+	height: 8.625rem;
+	left: calc(50% - min(48%, 38.75rem));
+	top: -4.375rem;
+	width: 18.8125rem;
+}
+
+.page-page__inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 53rem;
+	width: 100%;
+}
+
+.page-content h2 {
+	font-size: 2rem;
+}
+
 .page-faq::after {
 	height: 8.625rem;
 	left: calc(50% - min(48%, 38.75rem));
@@ -4465,6 +4441,20 @@ html {
 	margin-top: 1.625rem;
 }
 
+.page-page::after {
+	height: 8.625rem;
+	left: calc(50% - min(48%, 38.75rem));
+	top: -4.375rem;
+	width: 18.8125rem;
+}
+
+.page-page__inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 53rem;
+	width: 100%;
+}
+
 .page-price-lists {
 	gap: 5rem;
 }
@@ -4478,24 +4468,6 @@ html {
 
 .page-price__inner {
 	max-width: 47rem;
-}
-
-.page-privacy::after {
-	height: 8.625rem;
-	left: calc(50% - min(48%, 38.75rem));
-	top: -4.375rem;
-	width: 18.8125rem;
-}
-
-.page-privacy__contents {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 50rem;
-	width: 100%;
-}
-
-.page-privacy__contents h2 {
-	font-size: 2rem;
 }
 
 .page-sitemap-nav__content {
@@ -4533,28 +4505,6 @@ html {
 	flex-wrap: wrap;
 	gap: 1rem 2rem;
 	width: 100%;
-}
-
-.page-terms::after {
-	height: 8.625rem;
-	left: calc(50% - min(48%, 38.75rem));
-	top: -4.375rem;
-	width: 18.8125rem;
-}
-
-.page-terms__inner {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 53rem;
-	width: 100%;
-}
-
-.page-terms__title {
-	font-size: 2rem;
-}
-
-.page-terms__content h2 {
-	font-size: 2rem;
 }
 
 .page-thanks::after {
