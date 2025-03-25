@@ -84,30 +84,26 @@
                   </div>
                   <div class="campaign-card__foot">
                     <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                    　<?php
-                      // カスタムフィールドの値を取得
-                      $before = get_field('before');
-                      $after = get_field('after');
+                    <?php
+                    $campaign_price = get_field('campaign_price');
+                    $before = $campaign_price['before'] ?? null;
+                    $after = $campaign_price['after'] ?? null;
+                    ?>
 
-                      // どちらかに値がある場合のみ、価格エリア全体を表示
-                      if ($before || $after) : ?>
-                    <div class="campaign-card__price">
-
-                      <?php if ($before) : // before が設定されている場合のみ表示
-                      ?>
-                        <p class="campaign-card__price-before">
-                          ¥<?php echo esc_html($before); ?>
-                        </p>
-                      <?php endif; ?>
-
-                      <?php if ($after) : // after が設定されている場合のみ表示
-                      ?>
-                        <p class="campaign-card__price-after">
-                          ¥<?php echo esc_html($after); ?>
-                        </p>
-                      <?php endif; ?>
-                    </div>
-                  <?php endif; ?>
+                    <?php if ($before || $after) : ?>
+                      <div class="campaign-card__price">
+                        <?php if ($before) : ?>
+                          <p class="campaign-card__price-before">
+                            ¥<?php echo number_format($before); ?>
+                          </p>
+                        <?php endif; ?>
+                        <?php if ($after) : ?>
+                          <p class="campaign-card__price-after">
+                            ¥<?php echo number_format($after); ?>
+                          </p>
+                        <?php endif; ?>
+                      </div>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>

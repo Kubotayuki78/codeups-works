@@ -55,18 +55,18 @@
                 <div class="voice-card__head-body">
                   <div class="voice-card__head-meta">
                     <?php
-                    // ACFで作成したカスタムフィールド「age」と「gender」を取得
-                    $age_group = trim(get_field('age')); // 年代
-                    $gender = trim(get_field('gender')); // 性別
+                    $voice_group = get_field('voice_group');
+                    $age_group = trim($voice_group['age'] ?? '');
+                    $gender = trim($voice_group['gender'] ?? '');
 
-                    // 出力するテキストの準備
                     $output = '';
                     if ($age_group) {
-                      $output .= esc_html($age_group); // 年代を追加
+                      $output .= esc_html($age_group);
                     }
                     if ($gender) {
-                      $output .= $age_group ? '(' . esc_html($gender) . ')' : esc_html($gender); // 年代がある場合は「（性別）」、ない場合は「性別」のみ
+                      $output .= $age_group ? '(' . esc_html($gender) . ')' : esc_html($gender);
                     }
+
                     if ($output) :
                     ?>
                       <p class="voice-card__head-body-age"><?php echo $output; ?></p>

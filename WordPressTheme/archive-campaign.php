@@ -77,25 +77,21 @@
                   全部コミコミ(お一人様)
                 </p>
                 <?php
-                // カスタムフィールドの値を取得
-                $before = get_field('before');
-                $after = get_field('after');
+                $campaign_price = get_field('campaign_price');
+                $before = $campaign_price['before'] ?? null;
+                $after = $campaign_price['after'] ?? null;
+                ?>
 
-                // どちらかに値がある場合のみ、価格エリア全体を表示
-                if ($before || $after) : ?>
+                <?php if ($before || $after) : ?>
                   <div class="campaign-card__price">
-
-                    <?php if ($before) : // before が設定されている場合のみ表示
-                    ?>
+                    <?php if ($before) : ?>
                       <p class="campaign-card__price-before">
-                        ¥<?php echo esc_html($before); ?>
+                        ¥<?php echo number_format($before); ?>
                       </p>
                     <?php endif; ?>
-
-                    <?php if ($after) : // after が設定されている場合のみ表示
-                    ?>
+                    <?php if ($after) : ?>
                       <p class="campaign-card__price-after">
-                        ¥<?php echo esc_html($after); ?>
+                        ¥<?php echo number_format($after); ?>
                       </p>
                     <?php endif; ?>
                   </div>
@@ -103,7 +99,21 @@
                 <div class="campaign-card__page-block u-desktop">
                   <p class="campaign-card__page-description">
                     <?php the_content(); ?></p>
-                  <p class="campaign-card__page-span"><?php the_field('date'); ?></p>
+                  <?php
+                  $campaign_period = get_field('campaign_period');
+                  $start = $campaign_period['period_start'] ?? null;
+                  $end = $campaign_period['period_end'] ?? null;
+
+                  if ($start && $end) :
+                    // 開始日：年/月/日
+                    $start_date = date('Y/n/j', strtotime($start));
+                    // 終了日：月/日（年は省略）
+                    $end_date = date('n/j', strtotime($end));
+                  ?>
+                    <p class="campaign-card__page-span">
+                      <?php echo esc_html($start_date . '‐' . $end_date); ?>
+                    </p>
+                  <?php endif; ?>
                   <p class="campaign-card__page-text">
                     ご予約・お問い合わせはコチラ
                   </p>
