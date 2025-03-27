@@ -81,7 +81,6 @@
                 $before = $campaign_price['before'] ?? null;
                 $after = $campaign_price['after'] ?? null;
                 ?>
-
                 <?php if ($before || $after) : ?>
                   <div class="campaign-card__price">
                     <?php if ($before) : ?>
@@ -103,11 +102,8 @@
                   $campaign_period = get_field('campaign_period');
                   $start = $campaign_period['period_start'] ?? null;
                   $end = $campaign_period['period_end'] ?? null;
-
                   if ($start && $end) :
-                    // 開始日：年/月/日
                     $start_date = date('Y/n/j', strtotime($start));
-                    // 終了日：月/日（年は省略）
                     $end_date = date('n/j', strtotime($end));
                   ?>
                     <p class="campaign-card__page-span">

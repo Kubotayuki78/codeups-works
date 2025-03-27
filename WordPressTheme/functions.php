@@ -345,3 +345,50 @@ function add_origin_thanks_page()
      </script>
    EOC;
 }
+
+// ダッシュボードにオリジナルウィジェットを追加する
+add_action('wp_dashboard_setup', 'my_dashboard_widgets');
+function my_dashboard_widgets()
+{
+	wp_add_dashboard_widget('my_theme_options_widget', '編集ページ', 'my_dashboard_widget_function');
+}
+// ダッシュボードのオリジナルウィジェット内に情報を掲載する
+function my_dashboard_widget_function()
+{
+	// 管理画面に表示される内容を以下に書く
+	echo '<ul class="custom_widget">
+					<li>
+						<a href="post.php?post=28&action=edit">
+							<div class="dashicons dashicons-format-image"></div>
+							<p>トップページ画像編集</p>
+						</a>
+					</li>
+					<li>
+						<a href="post.php?post=198&action=edit">
+							<div class="dashicons dashicons-editor-help"></div>
+							<p>よくある質問</p>
+						</a>
+					</li>
+					<li>
+						<a href="post.php?post=16&action=edit">
+							<div class="dashicons dashicons-cart"></div>
+							<p>料金一覧</p>
+						</a>
+					</li>
+					<li>
+						<a href="post.php?post=9&action=edit">
+							<div class="dashicons dashicons-format-gallery"></div>
+							<p>gallery画像編集</p>
+						</a>
+					</li>
+				</ul>';
+}
+// ダッシュボードにスタイルシートを読み込む
+function custom_admin_enqueue($hook)
+{
+	// ダッシュボードページのときだけ読み込む（任意）
+	if ($hook === 'index.php') {
+		wp_enqueue_style('custom_admin_enqueue', get_stylesheet_directory_uri() . '/my-widgets.css');
+	}
+}
+add_action('admin_enqueue_scripts', 'custom_admin_enqueue');

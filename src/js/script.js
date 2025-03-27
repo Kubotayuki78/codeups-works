@@ -262,4 +262,22 @@ jQuery(function ($) {
       $(this).next(".side-archive__list").slideToggle(); // リストの表示・非表示
     });
   });
+
+  // ページ読み込み後にハッシュがあればスクロール調整
+  window.addEventListener("load", function () {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        const offset = 90; // ヘッダーの高さなど
+        const targetPosition =
+          target.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+  });
 });

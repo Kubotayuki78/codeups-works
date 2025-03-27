@@ -1,0 +1,49 @@
+@use "global" as *;
+.custom_widget {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列表示 */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.custom_widget li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.custom_widget li:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom_widget a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.custom_widget .dashicons {
+  font-size: 36px;
+  color: #0073aa; /* WordPressカラー */
+}
+
+.custom_widget p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.dashicons-format-image:before,
+.dashicons-editor-help:before,
+.dashicons-cart:before,
+.dashicons-format-gallery:before {
+  margin-left: -6px;
+}
